@@ -1,135 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
   <title>The Coders</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="The Coders">
-<meta property="og:url" content="https://The-Coderz.github.io/index.html">
-<meta property="og:site_name" content="The Coders">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="The Coders">
   
-    <link rel="alternate" href="/atom.xml" title="The Coders" type="application/atom+xml">
+  <link href="/atom.xml" rel="self"/>
   
+  <link href="https://The-Coderz.github.io/"/>
+  <updated>2016-12-29T15:20:48.000Z</updated>
+  <id>https://The-Coderz.github.io/</id>
   
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
-
-</head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">The Coders</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://The-Coderz.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="工具-Postman" class="article article-type-工具" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/28/Postman/" class="article-date">
-  <time datetime="2016-12-28T05:08:17.000Z" itemprop="datePublished">2016-12-28</time>
-</a>
+  <author>
+    <name>The-Coders</name>
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+  </author>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/28/Postman/">Postman</a>
-    </h1>
+  <generator uri="http://hexo.io/">Hexo</generator>
   
-
-      </header>
+  <entry>
+    <title>Postman</title>
+    <link href="https://The-Coderz.github.io/2016/12/28/Postman/"/>
+    <id>https://The-Coderz.github.io/2016/12/28/Postman/</id>
+    <published>2016-12-28T05:08:17.000Z</published>
+    <updated>2016-12-29T15:20:48.000Z</updated>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Postman工具"><a href="#Postman工具" class="headerlink" title="Postman工具"></a>Postman工具</h2><p><strong><a href="https://www.getpostman.com/docs/" target="_blank" rel="external">Docs</a></strong></p>
+    <content type="html"><![CDATA[<h2 id="Postman工具"><a href="#Postman工具" class="headerlink" title="Postman工具"></a>Postman工具</h2><p><strong><a href="https://www.getpostman.com/docs/" target="_blank" rel="external">Docs</a></strong></p>
 <h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><center><br><img src="/images/2016/12/04/Postman设置变量1.png" alt=""><br><br><br><img src="/images/2016/12/04/Postman设置变量2.png" alt=""><br><br><img src="/images/2016/12/04/Postman设置变量3.png" alt=""><br></center>
 
 
 
 
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://The-Coderz.github.io/2016/12/28/Postman/" data-id="cixaj0utb0000uwah4c91m9os" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2016-12-24-jpeg编码学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/28/2016-12-24-jpeg编码学习笔记/" class="article-date">
-  <time datetime="2016-12-28T04:51:28.000Z" itemprop="datePublished">2016-12-28</time>
-</a>
+]]></content>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/图形学/">图形学</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Postman工具&quot;&gt;&lt;a href=&quot;#Postman工具&quot; class=&quot;headerlink&quot; title=&quot;Postman工具&quot;&gt;&lt;/a&gt;Postman工具&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.getpostman.co
+    
+    </summary>
     
     
-      <header class="article-header">
-        
+  </entry>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/28/2016-12-24-jpeg编码学习笔记/">jpeg编码学习笔记</a>
-    </h1>
-  
-
-      </header>
+  <entry>
+    <title>jpeg编码学习笔记</title>
+    <link href="https://The-Coderz.github.io/2016/12/28/2016-12-24-jpeg%E7%BC%96%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://The-Coderz.github.io/2016/12/28/2016-12-24-jpeg编码学习笔记/</id>
+    <published>2016-12-28T04:51:28.000Z</published>
+    <updated>2016-12-28T04:51:28.000Z</updated>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>各种图片格式目的是在网络传输和存储的时候使用更少的字节，即起到压缩的作用。在图片格式解码后，无论图片的格式，图片数据都是像素数组。<br>本文将尝试通过JPEG这种图片编码格式的学习，了解图片编码的秘密。</p>
+    <content type="html"><![CDATA[<p>各种图片格式目的是在网络传输和存储的时候使用更少的字节，即起到压缩的作用。在图片格式解码后，无论图片的格式，图片数据都是像素数组。<br>本文将尝试通过JPEG这种图片编码格式的学习，了解图片编码的秘密。</p>
 <p><br><br><br><br><br></p>
 <h2 id="JPEG简介"><a href="#JPEG简介" class="headerlink" title="JPEG简介"></a>JPEG简介</h2><p>一张100X100大小的普通图片，如果未经压缩，大概在100<em>100</em>4*8bits=0.3MB左右,这也是图片在内存中占用的内存大小。<br>通常JPEG文件相对于原始图像,能够得到1/8的压缩比，如此高的压缩率是如何做到的呢？</p>
 <p>JPEG能够获得如此高的压缩比是因为使用了有损压缩技术，所谓有损压缩，就是把原始数据中不重要的部分去掉，以便可以用更小的体积保存。</p>
@@ -248,47 +165,29 @@
 <li><a href="http://www.impulseadventure.com/photo/jpeg-huffman-coding.html" target="_blank" rel="external">http://www.impulseadventure.com/photo/jpeg-huffman-coding.html</a></li>
 <li>《数字图像处理编程入门》</li>
 </ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://The-Coderz.github.io/2016/12/28/2016-12-24-jpeg编码学习笔记/" data-id="cixaj0uth0001uwahh335o4qe" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2016-12-25-代码浏览工具OpenGrok" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/28/2016-12-25-代码浏览工具OpenGrok/" class="article-date">
-  <time datetime="2016-12-28T04:51:28.000Z" itemprop="datePublished">2016-12-28</time>
-</a>
+]]></content>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/工具/">工具</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
+    <summary type="html">
+    
+      &lt;p&gt;各种图片格式目的是在网络传输和存储的时候使用更少的字节，即起到压缩的作用。在图片格式解码后，无论图片的格式，图片数据都是像素数组。&lt;br&gt;本文将尝试通过JPEG这种图片编码格式的学习，了解图片编码的秘密。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h
+    
+    </summary>
+    
+      <category term="图形学" scheme="https://The-Coderz.github.io/categories/%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
     
-      <header class="article-header">
-        
+  </entry>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/28/2016-12-25-代码浏览工具OpenGrok/">代码浏览工具OpenGrok</a>
-    </h1>
-  
-
-      </header>
+  <entry>
+    <title>代码浏览工具OpenGrok</title>
+    <link href="https://The-Coderz.github.io/2016/12/28/2016-12-25-%E4%BB%A3%E7%A0%81%E6%B5%8F%E8%A7%88%E5%B7%A5%E5%85%B7OpenGrok/"/>
+    <id>https://The-Coderz.github.io/2016/12/28/2016-12-25-代码浏览工具OpenGrok/</id>
+    <published>2016-12-28T04:51:28.000Z</published>
+    <updated>2016-12-28T04:51:28.000Z</updated>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://opengrok.github.io/OpenGrok/" target="_blank" rel="external">OpenGrok</a>是一款强大的跨平台代码阅读工具，许多在线源码查看网站都是使用它来搭建的，比如著名的Android在线源码查看网站<a href="http://androidxref.com/" target="_blank" rel="external">androidxref</a>.</p>
+    <content type="html"><![CDATA[<p><a href="https://opengrok.github.io/OpenGrok/" target="_blank" rel="external">OpenGrok</a>是一款强大的跨平台代码阅读工具，许多在线源码查看网站都是使用它来搭建的，比如著名的Android在线源码查看网站<a href="http://androidxref.com/" target="_blank" rel="external">androidxref</a>.</p>
 <p><br><br><br><br><br></p>
 <h2 id="OpenGrok特性"><a href="#OpenGrok特性" class="headerlink" title="OpenGrok特性"></a>OpenGrok特性</h2><p>OpenGrok 提供如下特性：</p>
 <ul>
@@ -332,43 +231,27 @@
 <p><a href="https://zhuanlan.zhihu.com/p/24369747" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/24369747</a></p>
 <p><a href="https://github.com/OpenGrok/OpenGrok/wiki/Features" target="_blank" rel="external">https://github.com/OpenGrok/OpenGrok/wiki/Features</a></p>
 <p><a href="http://bytesthink.com/blog/?p=184" target="_blank" rel="external">http://bytesthink.com/blog/?p=184</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://The-Coderz.github.io/2016/12/28/2016-12-25-代码浏览工具OpenGrok/" data-id="cixaj0utn0002uwahf4fr2n16" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2016-12-24-ELF文件装载链接过程及hook原理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/28/2016-12-24-ELF文件装载链接过程及hook原理/" class="article-date">
-  <time datetime="2016-12-28T04:51:28.000Z" itemprop="datePublished">2016-12-28</time>
-</a>
+]]></content>
     
-  </div>
-  <div class="article-inner">
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://opengrok.github.io/OpenGrok/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;OpenGrok&lt;/a&gt;是一款强大的跨平台代码阅读工具，许多在线源码查看网站都是使用它来搭建的，比如著名的Androi
+    
+    </summary>
+    
+      <category term="工具" scheme="https://The-Coderz.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <header class="article-header">
-        
+  </entry>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/28/2016-12-24-ELF文件装载链接过程及hook原理/">ELF文件装载链接过程及hook原理</a>
-    </h1>
-  
-
-      </header>
+  <entry>
+    <title>ELF文件装载链接过程及hook原理</title>
+    <link href="https://The-Coderz.github.io/2016/12/28/2016-12-24-ELF%E6%96%87%E4%BB%B6%E8%A3%85%E8%BD%BD%E9%93%BE%E6%8E%A5%E8%BF%87%E7%A8%8B%E5%8F%8Ahook%E5%8E%9F%E7%90%86/"/>
+    <id>https://The-Coderz.github.io/2016/12/28/2016-12-24-ELF文件装载链接过程及hook原理/</id>
+    <published>2016-12-28T04:51:28.000Z</published>
+    <updated>2016-12-28T04:51:28.000Z</updated>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="ELF文件格式解析"><a href="#ELF文件格式解析" class="headerlink" title="ELF文件格式解析"></a>ELF文件格式解析</h2><p>可执行和可链接格式(Executable and Linkable Format，缩写为ELF)，常被称为ELF格式，在计算机科学中，是一种用于执行档、目的档、共享库和核心转储的标准文件格式。</p>
+    <content type="html"><![CDATA[<h2 id="ELF文件格式解析"><a href="#ELF文件格式解析" class="headerlink" title="ELF文件格式解析"></a>ELF文件格式解析</h2><p>可执行和可链接格式(Executable and Linkable Format，缩写为ELF)，常被称为ELF格式，在计算机科学中，是一种用于执行档、目的档、共享库和核心转储的标准文件格式。</p>
 <p>ELF文件主要有四种类型：</p>
 <ul>
 <li>可重定位文件（Relocatable File） 包含适合于与其他目标文件链接来创建可执行文件或者共享目标文件的代码和数据。</li>
@@ -471,81 +354,47 @@
 <li><a href="http://shadowwhowalks.blogspot.com/2013/01/android-hacking-hooking-system.html" target="_blank" rel="external">Andrey Petrov’s blog</a></li>
 <li><a href="https://www.apriorit.com/dev-blog/181-elf-hook" target="_blank" rel="external">Redirecting functions in shared ELF libraries</a></li>
 </ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://The-Coderz.github.io/2016/12/28/2016-12-24-ELF文件装载链接过程及hook原理/" data-id="cixaj0utt0004uwah9m1crgg8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/28/hello-world/" class="article-date">
-  <time datetime="2016-12-28T04:51:28.000Z" itemprop="datePublished">2016-12-28</time>
-</a>
+]]></content>
     
-  </div>
-  <div class="article-inner">
+    <summary type="html">
+    
+      &lt;h2 id=&quot;ELF文件格式解析&quot;&gt;&lt;a href=&quot;#ELF文件格式解析&quot; class=&quot;headerlink&quot; title=&quot;ELF文件格式解析&quot;&gt;&lt;/a&gt;ELF文件格式解析&lt;/h2&gt;&lt;p&gt;可执行和可链接格式(Executable and Linkable Format，缩
+    
+    </summary>
     
     
-      <header class="article-header">
-        
+  </entry>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/28/hello-world/">【2016-11-26 Hello World】</a>
-    </h1>
-  
-
-      </header>
+  <entry>
+    <title>【2016-11-26 Hello World】</title>
+    <link href="https://The-Coderz.github.io/2016/12/28/hello-world/"/>
+    <id>https://The-Coderz.github.io/2016/12/28/hello-world/</id>
+    <published>2016-12-28T04:51:28.000Z</published>
+    <updated>2016-12-28T04:51:28.000Z</updated>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to The Coders! </p>
+    <content type="html"><![CDATA[<p>Welcome to The Coders! </p>
 <p>这是编程者联盟的第一篇博客。我们会在这里不定期地更新一些技术分享。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://The-Coderz.github.io/2016/12/28/hello-world/" data-id="cixaj0utv0005uwah21vvqqsv" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-【2016-12-02-Java编码小结】" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/03/【2016-12-02-Java编码小结】/" class="article-date">
-  <time datetime="2016-12-03T01:43:18.000Z" itemprop="datePublished">2016-12-03</time>
-</a>
+]]></content>
     
-  </div>
-  <div class="article-inner">
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to The Coders! &lt;/p&gt;
+&lt;p&gt;这是编程者联盟的第一篇博客。我们会在这里不定期地更新一些技术分享。&lt;/p&gt;
+
+    
+    </summary>
     
     
-      <header class="article-header">
-        
+  </entry>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/03/【2016-12-02-Java编码小结】/">【2016-12-02 Java编码小结】</a>
-    </h1>
-  
-
-      </header>
+  <entry>
+    <title>【2016-12-02 Java编码小结】</title>
+    <link href="https://The-Coderz.github.io/2016/12/03/%E3%80%902016-12-02-Java%E7%BC%96%E7%A0%81%E5%B0%8F%E7%BB%93%E3%80%91/"/>
+    <id>https://The-Coderz.github.io/2016/12/03/【2016-12-02-Java编码小结】/</id>
+    <published>2016-12-03T01:43:18.000Z</published>
+    <updated>2016-12-04T01:15:50.000Z</updated>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
+    <content type="html"><![CDATA[<hr>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编码问题一直都是令程序员捉摸不透的东西，因为它被越来越透明化：程序中默认用OS的字符集、许多文件开头都有编码格式的约定……这就导致一旦遇到乱码的现象，就让人无从下手，所以在了解了一部分知识和实现之后，我想对Java的编码做一下小结，方便日后自己查阅。</p>
 <hr>
 <h3 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h3><ul>
@@ -623,128 +472,18 @@ System.out.println(a);
 <li>Java编译，如果没有指定编码，则会使用Unicode，具体是UTF-8编码来存储到.class中；</li>
 <li>Java的String对象中存储的char[]都是用Unicode，具体是UTF-8来存储的。</li>
 </ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://The-Coderz.github.io/2016/12/03/【2016-12-02-Java编码小结】/" data-id="cixaj0uty0006uwaho6n51n16" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-</section>
-        
-          <aside id="sidebar">
-  
+]]></content>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/图形学/">图形学</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a></li></ul>
-    </div>
-  </div>
-
-
-  
+    <summary type="html">
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li></ul>
-    </div>
-  </div>
-
-
-  
+      &lt;hr&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;编码问题一直都是令程序员捉摸不透的东西，因为它被越来越透明化：程序中默认用OS的字符集、许多文件开头都有编码格式的约定……这就导致一旦遇到乱码的现象，就让人无从下手，所以在了解了一部分知识和实
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Java/" style="font-size: 10px;">Java</a>
-    </div>
-  </div>
-
-  
+    </summary>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li></ul>
-    </div>
-  </div>
-
-
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/12/28/Postman/">Postman</a>
-          </li>
-        
-          <li>
-            <a href="/2016/12/28/2016-12-24-jpeg编码学习笔记/">jpeg编码学习笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2016/12/28/2016-12-25-代码浏览工具OpenGrok/">代码浏览工具OpenGrok</a>
-          </li>
-        
-          <li>
-            <a href="/2016/12/28/2016-12-24-ELF文件装载链接过程及hook原理/">ELF文件装载链接过程及hook原理</a>
-          </li>
-        
-          <li>
-            <a href="/2016/12/28/hello-world/">【2016-11-26 Hello World】</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 The-Coders<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+      <category term="Java" scheme="https://The-Coderz.github.io/tags/Java/"/>
     
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-  </div>
-</body>
-</html>
+  </entry>
+  
+</feed>
