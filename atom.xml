@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://The-Coderz.github.io/"/>
-  <updated>2016-12-29T15:20:48.000Z</updated>
+  <updated>2016-12-29T15:45:52.000Z</updated>
   <id>https://The-Coderz.github.io/</id>
   
   <author>
@@ -20,14 +20,16 @@
     <link href="https://The-Coderz.github.io/2016/12/28/Postman/"/>
     <id>https://The-Coderz.github.io/2016/12/28/Postman/</id>
     <published>2016-12-28T05:08:17.000Z</published>
-    <updated>2016-12-29T15:20:48.000Z</updated>
+    <updated>2016-12-29T15:45:52.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Postman工具"><a href="#Postman工具" class="headerlink" title="Postman工具"></a>Postman工具</h2><p><strong><a href="https://www.getpostman.com/docs/" target="_blank" rel="external">Docs</a></strong></p>
-<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><center><br><img src="/images/2016/12/04/Postman设置变量1.png" alt=""><br><br><br><img src="/images/2016/12/04/Postman设置变量2.png" alt=""><br><br><img src="/images/2016/12/04/Postman设置变量3.png" alt=""><br></center>
+<h3 id="变量设置"><a href="#变量设置" class="headerlink" title="变量设置"></a>变量设置</h3><center><br><img src="/images/2016/12/28/Postman设置变量1.png" alt=""><br><br><br><img src="/images/2016/12/28/Postman设置变量2.png" alt=""><br><br><img src="/images/2016/12/28/Postman设置变量3.png" alt=""><br></center>
 
 
+<h3 id="预调用脚本"><a href="#预调用脚本" class="headerlink" title="预调用脚本"></a>预调用脚本</h3><p>&nbps;&nbps;&nbps;&nbps;&nbps;&nbps;遇到随着时间变化的变量，譬如：认证key，在之前简单的变量设置就显得有些不足了。最好就是在调用脚本的时候，能自动按照规则计算出变量的值，并且把变量这只到环境变量中。Postman的Pre-request Script就是很好的解决途径。</p>
+<center><br><img src="/images/2016/12/28/Postman-pre-request-script-01.png" alt=""><br></center>
 
-
+<p>&nbps;&nbps;&nbps;&nbps;&nbps;&nbps;此时，在用”“这样的环境变量形式(和上面提到的一样)，就可以了。</p>
 ]]></content>
     
     <summary type="html">
@@ -245,6 +247,28 @@
   </entry>
   
   <entry>
+    <title>【2016-11-26 Hello World】</title>
+    <link href="https://The-Coderz.github.io/2016/12/28/hello-world/"/>
+    <id>https://The-Coderz.github.io/2016/12/28/hello-world/</id>
+    <published>2016-12-28T04:51:28.000Z</published>
+    <updated>2016-12-28T04:51:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to The Coders! </p>
+<p>这是编程者联盟的第一篇博客。我们会在这里不定期地更新一些技术分享。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to The Coders! &lt;/p&gt;
+&lt;p&gt;这是编程者联盟的第一篇博客。我们会在这里不定期地更新一些技术分享。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>ELF文件装载链接过程及hook原理</title>
     <link href="https://The-Coderz.github.io/2016/12/28/2016-12-24-ELF%E6%96%87%E4%BB%B6%E8%A3%85%E8%BD%BD%E9%93%BE%E6%8E%A5%E8%BF%87%E7%A8%8B%E5%8F%8Ahook%E5%8E%9F%E7%90%86/"/>
     <id>https://The-Coderz.github.io/2016/12/28/2016-12-24-ELF文件装载链接过程及hook原理/</id>
@@ -359,28 +383,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;ELF文件格式解析&quot;&gt;&lt;a href=&quot;#ELF文件格式解析&quot; class=&quot;headerlink&quot; title=&quot;ELF文件格式解析&quot;&gt;&lt;/a&gt;ELF文件格式解析&lt;/h2&gt;&lt;p&gt;可执行和可链接格式(Executable and Linkable Format，缩
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>【2016-11-26 Hello World】</title>
-    <link href="https://The-Coderz.github.io/2016/12/28/hello-world/"/>
-    <id>https://The-Coderz.github.io/2016/12/28/hello-world/</id>
-    <published>2016-12-28T04:51:28.000Z</published>
-    <updated>2016-12-28T04:51:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to The Coders! </p>
-<p>这是编程者联盟的第一篇博客。我们会在这里不定期地更新一些技术分享。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to The Coders! &lt;/p&gt;
-&lt;p&gt;这是编程者联盟的第一篇博客。我们会在这里不定期地更新一些技术分享。&lt;/p&gt;
-
     
     </summary>
     
