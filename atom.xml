@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://The-Coderz.github.io/"/>
-  <updated>2016-12-30T01:27:40.000Z</updated>
+  <updated>2017-01-04T17:09:24.000Z</updated>
   <id>https://The-Coderz.github.io/</id>
   
   <author>
@@ -16,11 +16,94 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用TraceView工具定位耗时操作</title>
+    <link href="https://The-Coderz.github.io/2017/01/05/2016-12-27-%E9%80%9A%E8%BF%87trace%E6%96%87%E4%BB%B6%E5%AE%9A%E4%BD%8D%E8%80%97%E6%97%B6%E6%93%8D%E4%BD%9C/"/>
+    <id>https://The-Coderz.github.io/2017/01/05/2016-12-27-通过trace文件定位耗时操作/</id>
+    <published>2017-01-04T17:09:24.000Z</published>
+    <updated>2017-01-04T17:09:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://developer.android.com/studio/profile/traceview.html" target="_blank" rel="external">TraceView</a>是DDMS中的工具，可以用来定位Android app中java方法的耗时操作。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="1-生成trace文件"><a href="#1-生成trace文件" class="headerlink" title="1.生成trace文件"></a>1.生成trace文件</h3><p>Eclipse中生成trace文件的方法：<br><img src="http://ww4.sinaimg.cn/mw690/8b331ee1gw1fb5lfcb484j20zg0pmtf7.jpg" alt=""></p>
+<p><br><br>Android Studio生成trace文件的方法:</p>
+<p><img src="http://ww2.sinaimg.cn/large/8b331ee1gw1fb5lgu5dsmj21kw0fmgpk.jpg" alt=""></p>
+<p>生成的trace文件将显示在Captures窗口</p>
+<p><img src="http://ww2.sinaimg.cn/large/8b331ee1gw1fb5lx8hffej20a707jmxe.jpg" alt=""><br>直接把trace文件拖到安装了ADT插件的Eclipse就能打开。</p>
+<h3 id="2-Timeline-Panel"><a href="#2-Timeline-Panel" class="headerlink" title="2.Timeline Panel"></a>2.Timeline Panel</h3><p>Timeline展示各个线程占用CPU的情况。<br>横轴为从开始到结束trace的CPU时间，右边纵轴表示各个线程，每一横排表示线程占用CPU的情况。这里主要看主线程main</p>
+<p><img src="http://ww1.sinaimg.cn/large/8b331ee1gw1fb5lrgshrqj21kw07jtbu.jpg" alt=""></p>
+<p>放大后的效果如图，每个method用不同的颜色表示，展示CPU调用该方法到结束调用的时间。</p>
+<p><img src="http://ww1.sinaimg.cn/large/8b331ee1gw1fb5m32u3j6j21am0bcn0k.jpg" alt=""></p>
+<h3 id="3-Profile-Panel"><a href="#3-Profile-Panel" class="headerlink" title="3.Profile Panel"></a>3.Profile Panel</h3><p>Profile Panel展示了方法全名，方法耗时，调用次数，及方法的调用链关系。<br>在这里调用方法称为”parent”,被调方法称为”children”.</p>
+<p><img src="http://ww3.sinaimg.cn/large/8b331ee1gw1fb5mewco9uj21kw0ngtsb.jpg" alt=""></p>
+<hr>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>《High Performance Android Apps》</p>
+<p><a href="https://developer.android.com/studio/profile/traceview.html" target="_blank" rel="external">https://developer.android.com/studio/profile/traceview.html</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://developer.android.com/studio/profile/traceview.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TraceView&lt;/a&gt;是DDMS中的工具，可以用来定位Android
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="https://The-Coderz.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>simple-mock-api</title>
+    <link href="https://The-Coderz.github.io/2017/01/05/simple-mock-api/"/>
+    <id>https://The-Coderz.github.io/2017/01/05/simple-mock-api/</id>
+    <published>2017-01-04T17:09:24.000Z</published>
+    <updated>2017-01-04T17:09:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>项目中有一个Activiy需要轮询多个接口，实时刷新数据。这里很多业务逻辑都需要依赖当前的状态，所以简单写了一个服务端，用于生成一些mock data，并且支持数据实时刷新。</p>
+<p>项目地址：<a href="https://github.com/FelixZhang00/simple-mock-api" target="_blank" rel="external">simple-mock-api</a></p>
+<p>挂到<a href="https://www.qcloud.com/" target="_blank" rel="external">腾讯云</a>上就可以公网访问了。</p>
+<hr>
+<h1 id="simple-mock-api"><a href="#simple-mock-api" class="headerlink" title="simple-mock-api"></a>simple-mock-api</h1><p>Use <a href="https://github.com/typicode/json-server" target="_blank" rel="external">json-server</a> make this simple mock api server.</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><ol>
+<li>checkout this project,and cd</li>
+<li>type <code>npm install</code> in terminal to install dependences</li>
+<li>run <code>node app.js</code></li>
+<li>get result via your configed cgi，like <a href="http://localhost:3000/get_match_players" target="_blank" rel="external">http://localhost:3000/get_match_players</a></li>
+</ol>
+<h2 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h2><p>You can config </p>
+<pre><code>cgi，
+default json file,
+custom handle the request, modify json response
+</code></pre><h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p>Create a <code>get_match_detail.json</code> file in <code>data</code> folder.</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"state"</span>: <span class="number">1</span>,</div><div class="line">  <span class="attr">"title"</span>:<span class="string">"NBA"</span>,</div><div class="line">  <span class="attr">"time"</span>:<span class="string">"2017-01-01"</span>,</div><div class="line">  <span class="attr">"homescore"</span>: <span class="string">"101"</span>,</div><div class="line">  <span class="attr">"guestscore"</span>: <span class="string">"115"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>In <code>config.js</code> config you mock api</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var config = [</div><div class="line">&#123;</div><div class="line">	"cgi":"/get_match_detail",</div><div class="line">	"filepath":"data/get_match_detail.json",</div><div class="line">	"need_cache":true,</div><div class="line">	"hookfunc":func_get_match_detail</div><div class="line">&#125;,</div><div class="line">&#123;</div><div class="line">	"cgi":"/get_match_players",</div><div class="line">	"filepath":"data/get_match_players.json",</div><div class="line">	"need_cache":false,</div><div class="line">	"hookfunc":func_get_match_players</div><div class="line">&#125;,</div><div class="line"></div><div class="line">];</div></pre></td></tr></table></figure>
+<p>You can custom handle the request by define your custom “hookfunc”, like this:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> func_get_match_detail = <span class="function"><span class="keyword">function</span>(<span class="params">defaultObj,req</span>) </span>&#123;</div><div class="line">	<span class="comment">//increase homescore every time</span></div><div class="line">	<span class="keyword">var</span> homescore = <span class="built_in">parseInt</span>(defaultObj.homescore)+<span class="number">1</span>+<span class="string">""</span>;</div><div class="line">	defaultObj.homescore = homescore;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The param <code>defaultObj</code> means the parsed json object you defined in the key “filepath”. </p>
+<p>If the key “need_cache” seted true, than your hookfunc can change the defaultObj in the cache forever.</p>
+<h3 id="Start-JSON-Server"><a href="#Start-JSON-Server" class="headerlink" title="Start JSON Server"></a>Start JSON Server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node app.js</div></pre></td></tr></table></figure>
+<p>Now if you go to <a href="http://localhost:3000/get_match_detail" target="_blank" rel="external">http://localhost:3000/get_match_detail</a>, you’ll get</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"state"</span>: <span class="number">1</span>,</div><div class="line">  <span class="attr">"title"</span>:<span class="string">"NBA"</span>,</div><div class="line">  <span class="attr">"time"</span>:<span class="string">"2017-01-01"</span>,</div><div class="line">  <span class="attr">"homescore"</span>: <span class="string">"102"</span>,</div><div class="line">  <span class="attr">"guestscore"</span>: <span class="string">"115"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>and the homescore’s value changed every time when you go to the same link.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;项目中有一个Activiy需要轮询多个接口，实时刷新数据。这里很多业务逻辑都需要依赖当前的状态，所以简单写了一个服务端，用于生成一些mock data，并且支持数据实时刷新。&lt;/p&gt;
+&lt;p&gt;项目地址：&lt;a href=&quot;https://github.com/FelixZhan
+    
+    </summary>
+    
+    
+      <category term="nodejs" scheme="https://The-Coderz.github.io/tags/nodejs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Postman</title>
     <link href="https://The-Coderz.github.io/2016/12/28/Postman/"/>
     <id>https://The-Coderz.github.io/2016/12/28/Postman/</id>
     <published>2016-12-28T05:08:17.000Z</published>
-    <updated>2016-12-30T01:27:40.000Z</updated>
+    <updated>2017-01-04T17:12:43.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Postman工具"><a href="#Postman工具" class="headerlink" title="Postman工具"></a>Postman工具</h2><p><strong><a href="https://www.getpostman.com/docs/" target="_blank" rel="external">Docs</a></strong></p>
 <h3 id="变量设置"><a href="#变量设置" class="headerlink" title="变量设置"></a>变量设置</h3><center><br><img src="/images/2016/12/28/Postman设置变量1.png" alt=""><br><br><br><img src="/images/2016/12/28/Postman设置变量2.png" alt=""><br><br><img src="/images/2016/12/28/Postman设置变量3.png" alt=""><br></center>
@@ -29,7 +112,7 @@
 <h3 id="预调用脚本"><a href="#预调用脚本" class="headerlink" title="预调用脚本"></a>预调用脚本</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;遇到随着时间变化的变量，譬如：认证key，在之前简单的变量设置就显得有些不足了。最好就是在调用脚本的时候，能自动按照规则计算出变量的值，并且把变量这只到环境变量中。Postman的Pre-request Script就是很好的解决途径。</p>
 <center><br><img src="/images/2016/12/28/Postman-pre-request-script-01.png" alt=""><br></center>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此时，在用”“这样的环境变量形式(和上面提到的一样)，就可以了。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此时，在用<code></code>这样的环境变量形式(和上面提到的一样)，就可以了。</p>
 ]]></content>
     
     <summary type="html">
@@ -37,6 +120,147 @@
       &lt;h2 id=&quot;Postman工具&quot;&gt;&lt;a href=&quot;#Postman工具&quot; class=&quot;headerlink&quot; title=&quot;Postman工具&quot;&gt;&lt;/a&gt;Postman工具&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.getpostman.co
     
     </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>jpeg编码学习笔记</title>
+    <link href="https://The-Coderz.github.io/2016/12/28/2016-12-24-jpeg%E7%BC%96%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://The-Coderz.github.io/2016/12/28/2016-12-24-jpeg编码学习笔记/</id>
+    <published>2016-12-28T04:51:28.000Z</published>
+    <updated>2016-12-28T04:51:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>各种图片格式目的是在网络传输和存储的时候使用更少的字节，即起到压缩的作用。在图片格式解码后，无论图片的格式，图片数据都是像素数组。<br>本文将尝试通过JPEG这种图片编码格式的学习，了解图片编码的秘密。</p>
+<p><br><br><br><br><br></p>
+<h2 id="JPEG简介"><a href="#JPEG简介" class="headerlink" title="JPEG简介"></a>JPEG简介</h2><p>一张100X100大小的普通图片，如果未经压缩，大概在100<em>100</em>4*8bits=0.3MB左右,这也是图片在内存中占用的内存大小。<br>通常JPEG文件相对于原始图像,能够得到1/8的压缩比，如此高的压缩率是如何做到的呢？</p>
+<p>JPEG能够获得如此高的压缩比是因为使用了有损压缩技术，所谓有损压缩，就是把原始数据中不重要的部分去掉，以便可以用更小的体积保存。</p>
+<p>JPEG编码是基于两个idea，第一个是基于相邻的像素信息是相近的，即空间冗余性，尽量少记录重复的数据来达到压缩的效果。第二个是基于图像信号的频谱特性，图像包含各种频率，大部分为低频频谱，少部分为高频频谱。可以保留包含图像信息较多的低频频谱，舍去包含图像信息较少的高频频谱。而达到图片质量没有可察觉的损伤，又能达到压缩的效果。这也说明了JPEG是有损编码。</p>
+<p><br><br><br><br><br></p>
+<h2 id="JPEG的编码过程"><a href="#JPEG的编码过程" class="headerlink" title="JPEG的编码过程"></a>JPEG的编码过程</h2><p>编码流程如下图：<br><img src="http://ww4.sinaimg.cn/large/8b331ee1gw1fb2c7jxxyaj20eg08d74o.jpg" alt="编码流程示意图"></p>
+<p><br><br><br><br><br></p>
+<h3 id="1-色彩空间转换"><a href="#1-色彩空间转换" class="headerlink" title="1.色彩空间转换"></a>1.色彩空间转换</h3><p>将RGB色彩空间转换到其他色彩空间，比如<a href="https://en.wikipedia.org/wiki/YUV" target="_blank" rel="external">YUV</a>色彩空间。<br>出现YUV,主要有两个原因，一个是为了让彩色信号兼容黑白电视机，另外一个原因是为了减少传输的带宽。<br>下图为老电视后面的色差接口。<br><img src="http://ww3.sinaimg.cn/large/8b331ee1gw1fb24juusowj206u046q3w.jpg" alt="电视色差接口"><br>YUV中，Y表示亮度，U和V表示色度，总之它是将RGB信号进行了一种处理，根据人对亮度更敏感些，增加亮度的信号，减少颜色的信号，以这样“欺骗”人的眼睛的手段来节省空间。YUV的格式也很多，不过常见的就是422和420格式。</p>
+<p>下图为420格式，每四个Y共用一组UV分量，每个YUV分量和RGB一样都用8位来表示，YUV色彩空间就比RGB色彩空间所需的存储空间少一半，数据就被压缩到了一半。<br><img src="http://ww4.sinaimg.cn/large/8b331ee1gw1fb24kvqketj20aa04n3zt.jpg" alt="Y420"></p>
+<p><br><br><br><br><br></p>
+<h3 id="2-离散余弦变换DCT"><a href="#2-离散余弦变换DCT" class="headerlink" title="2.离散余弦变换DCT"></a>2.离散余弦变换DCT</h3><p>简单地说，DCT是傅里叶变换的一种，变换后会得到一个系数。<br>有关DCT的详细介绍可以看这个<a href="https://www.youtube.com/watch?v=Q2aEzeMDHMA" target="_blank" rel="external">视频</a>。</p>
+<p>在JPEG压缩过程中，经过颜色空间的转换，每一个色值表示成8X8的图像块，下图为一个色彩域取样块，转化为频率域的DCT系数块：<br><img src="http://ww1.sinaimg.cn/large/8b331ee1gw1fb24n45lgbj20gv03qq3u.jpg" alt="转化为频率域的DCT系数块"></p>
+<p>图片经过此步骤会输出一个频率系数矩阵，左上的系数幅度值最大，越往右下，系数的幅度值越小，频率越高。大部分图片信息都在频率域矩阵左上区域，右下几乎不含有图片信息，甚至只含杂波。<br>注意：转换后的DCT系数块矩阵(x,y)处的值并不和转换前的颜色空间矩阵（x,y）处的像素值直接对应。</p>
+<p>这一步骤没有压缩作用，它目的是为下一步骤找低频和高频区域，也就是找出留下的区域和舍去的区域。</p>
+<p><br><br><br><br><br></p>
+<h3 id="3-量化"><a href="#3-量化" class="headerlink" title="3.量化"></a>3.量化</h3><p>此步是将上步求得的DCT系数的简化的过程，利用人眼对高频部分不敏感的特性来舍去高频部分。<br>这里有两张表分别对亮度和色度做量化处理。</p>
+<p>标准亮度量化表：<br><img src="http://ww3.sinaimg.cn/large/8b331ee1gw1fb24qq7yq0j20sw0b8t9r.jpg" alt="标准亮度量化表"></p>
+<p>标准色度量化表：<br><img src="http://ww2.sinaimg.cn/large/8b331ee1gw1fb24rftccuj20sy0b8gmn.jpg" alt="标准色度量化表"></p>
+<p>量化表是控制 JPEG 压缩比的关键。<br>DCT系数矩阵中的不同位置的值代表了图像数据中不同频率的分量，这两张表中的数据是根据人眼对不同频率的敏感程度的差别所积累下的经验制定的。这个步骤除掉了一些高频量, 损失了很多细节. 但事实上人眼对高空间频率远没有低频敏感.所以处理后的视觉损失很小。<br>另一个重要原因是所有的图片的点与点之间会有一个色彩过渡的过程. 大量的图象信息被包含在低空间频率中。 经过量化处理后, 在高空间频率段, 将出现大量连续的零。</p>
+<p>把上面的DCT系数块通过量化后的结果如下图，其中第一个数-26是直流DC部分，它是一块图象样本的平均值，包含了原始8x8图像块中的很多能量，其余的是交流AC部分。<br>计算方法为：频率系数矩阵的数值除以对应量化表位置上的数值，并四舍五入到最近的整数。<br><img src="http://ww4.sinaimg.cn/large/8b331ee1gw1fb24usawejg20ie034t8o.gif" alt="量化过程"></p>
+<p>解码的时候，反量化步骤会乘回量化表相应值，但是四舍五入导致低频有所损失，高频0字段被舍弃。此步为有损运算，会导致图像质量变低。所以说JPEG是有损编码。</p>
+<p><br><br><br><br><br></p>
+<h3 id="4-zig-zag游程编码"><a href="#4-zig-zag游程编码" class="headerlink" title="4.zig-zag游程编码"></a>4.zig-zag游程编码</h3><p>量化后的数据还可以进行简化，更大程度的去压缩。<br><img src="http://ww4.sinaimg.cn/large/8b331ee1gw1fb251cuevrj20fe0bq0tg.jpg" alt="zig-zag表"></p>
+<p>根据上面的zig-zag表重排数据的过程：<br><img src="http://ww4.sinaimg.cn/large/8b331ee1gw1fb255f7vvsj208s05mq38.jpg" alt="zig-zag过程"><br>根据ZigZag表的规则对量化后的数据进行重排后的结果中可以看到出现连续的多个0，这样有利于进行游程编码。</p>
+<p><br><br><br><br><br></p>
+<h3 id="5-范式Huffman编码"><a href="#5-范式Huffman编码" class="headerlink" title="5.范式Huffman编码"></a>5.范式Huffman编码</h3><h4 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h4><p>huffman编码的基本原理是根据数据中元素的使用频率，调整元素的编码长度，以得到更高的压缩比。<br>举个例子，比如下面这段数据</p>
+<p><code>AABCBABBCDBBDDBAABDBBDABBBBDDEDBD</code></p>
+<p>这段数据里面包含了33个字符，每种字符出现的次数统计如下</p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>次数</td>
+<td>6</td>
+<td>15</td>
+<td>2</td>
+<td>9</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>如果我们用我们常见的定长编码，因为有5个文字，可以用3个bit表示，那么这段文字共需要3*33 = 99个bit来保存</p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>编码</td>
+<td>001</td>
+<td>010</td>
+<td>011</td>
+<td>100</td>
+<td>101</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>如果根据字符出现的概率，使用如下的编码</p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>编码</td>
+<td>100</td>
+<td>0</td>
+<td>1110</td>
+<td>10</td>
+<td>1111</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>那么这段文字共需要3<em>6 + 1</em>15 + 4<em>2 + 2</em>9 + 4*1 = 63bit，压缩比为63%。 是较短的编码不能够是较长编码的前缀，比如上面这个编码，就是由下面的这颗二叉树生成的。<br>哈弗曼编码一般都是使用二叉树来生成的，频率会高的数据对应的树节点的位置越高。这样得到的编码符合前缀规则，也就是较短的编码不能够是较长编码的前缀。</p>
+<p><img src="http://ww4.sinaimg.cn/large/8b331ee1gw1fb25jyerm4j207h0760sr.jpg" alt="哈夫曼树"></p>
+<p><br></p>
+<h4 id="Huffman编码在JPEG中"><a href="#Huffman编码在JPEG中" class="headerlink" title="Huffman编码在JPEG中"></a>Huffman编码在JPEG中</h4><p>假设在JPEG量化处理后的数据为：<br><code>35,7,0,0,0,-6,-2,0,0,-9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0,…,0</code></p>
+<p>根据<a href="https://en.wikipedia.org/wiki/Run-length_encoding" target="_blank" rel="external">RLE</a>编码(游程编码)规则<br>1、用固定的4位来存储重复的数量，所以最多重复内容可以记录数量为15，超过15次要进行分段处理；<br>2、只将0作为重复的内容，每个数值记录前面有多少重复的0，末尾如果都是0用EOB作为代表；<br>3、此步不包含第一个数值，第一个数为直流系数，此步只处理交流系数。<br>得到处理结果：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8b331ee1gw1fb262lkvzaj21kw048ab4.jpg" alt="RLE编码"><br><br><br><br> </p>
+<p>为了提高储存效率, JPEG 里并不直接保存数值, 而是将数值按位数分成 16 组,JPEG提供了一张标准的码表用于对这些数字编码<br><img src="http://ww3.sinaimg.cn/large/8b331ee1gw1fb263fusn6j210w0he768.jpg" alt="标准码表"></p>
+<p>举例来说，第3个单元中的“-6”这个数字，在表中的位置是长度为3的那组，所对应的bit码是“001”，由于这种编码附带长度信息，所以我们的数据变成了如下的格式。<br><img src="http://ww4.sinaimg.cn/large/8b331ee1gw1fb265nsj1aj21kw065jt8.jpg" alt="BIT编码"><br><br><br><br> </p>
+<p>对于括号前面的数字的编码，分成DC编码和AC编码。<br>下表是针对直流(DC)部分即第一个数字的哈弗曼表，由于直流部分没有前置的0，所以取值范围在0~15之间。</p>
+<p><img src="http://ww2.sinaimg.cn/mw690/8b331ee1gw1fb26bixac2j20pc0nugmw.jpg" alt=""></p>
+<p>对于其余的交流（AC）部分，取值范围在0~255，哈夫曼表如下：</p>
+<p><img src="http://ww4.sinaimg.cn/mw690/8b331ee1gw1fb26bvyx0oj20q211e410.jpg" alt=""></p>
+<p><br><br><br><br>完整个编码过程如下表，最终的数据使用10个字节保存了原本长度为64字节的数据，JPEG的压缩算法完成。<br><img src="http://ww2.sinaimg.cn/large/8b331ee1gw1fb268ej9k9j21kw09yn0a.jpg" alt=""></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://blog.mrriddler.com/2016/07/20/%E5%9B%BE%E7%89%87%E4%B9%8B%E6%97%85/" target="_blank" rel="external">http://blog.mrriddler.com/2016/07/20/%E5%9B%BE%E7%89%87%E4%B9%8B%E6%97%85/</a></li>
+<li><a href="http://thecodeway.com/blog/?p=69" target="_blank" rel="external">http://thecodeway.com/blog/?p=69</a></li>
+<li><a href="http://www.impulseadventure.com/photo/jpeg-huffman-coding.html" target="_blank" rel="external">http://www.impulseadventure.com/photo/jpeg-huffman-coding.html</a></li>
+<li>《数字图像处理编程入门》</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;各种图片格式目的是在网络传输和存储的时候使用更少的字节，即起到压缩的作用。在图片格式解码后，无论图片的格式，图片数据都是像素数组。&lt;br&gt;本文将尝试通过JPEG这种图片编码格式的学习，了解图片编码的秘密。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h
+    
+    </summary>
+    
+      <category term="图形学" scheme="https://The-Coderz.github.io/categories/%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
     
   </entry>
@@ -222,147 +446,6 @@
     </summary>
     
       <category term="工具" scheme="https://The-Coderz.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>jpeg编码学习笔记</title>
-    <link href="https://The-Coderz.github.io/2016/12/28/2016-12-24-jpeg%E7%BC%96%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://The-Coderz.github.io/2016/12/28/2016-12-24-jpeg编码学习笔记/</id>
-    <published>2016-12-28T04:51:28.000Z</published>
-    <updated>2016-12-28T04:51:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>各种图片格式目的是在网络传输和存储的时候使用更少的字节，即起到压缩的作用。在图片格式解码后，无论图片的格式，图片数据都是像素数组。<br>本文将尝试通过JPEG这种图片编码格式的学习，了解图片编码的秘密。</p>
-<p><br><br><br><br><br></p>
-<h2 id="JPEG简介"><a href="#JPEG简介" class="headerlink" title="JPEG简介"></a>JPEG简介</h2><p>一张100X100大小的普通图片，如果未经压缩，大概在100<em>100</em>4*8bits=0.3MB左右,这也是图片在内存中占用的内存大小。<br>通常JPEG文件相对于原始图像,能够得到1/8的压缩比，如此高的压缩率是如何做到的呢？</p>
-<p>JPEG能够获得如此高的压缩比是因为使用了有损压缩技术，所谓有损压缩，就是把原始数据中不重要的部分去掉，以便可以用更小的体积保存。</p>
-<p>JPEG编码是基于两个idea，第一个是基于相邻的像素信息是相近的，即空间冗余性，尽量少记录重复的数据来达到压缩的效果。第二个是基于图像信号的频谱特性，图像包含各种频率，大部分为低频频谱，少部分为高频频谱。可以保留包含图像信息较多的低频频谱，舍去包含图像信息较少的高频频谱。而达到图片质量没有可察觉的损伤，又能达到压缩的效果。这也说明了JPEG是有损编码。</p>
-<p><br><br><br><br><br></p>
-<h2 id="JPEG的编码过程"><a href="#JPEG的编码过程" class="headerlink" title="JPEG的编码过程"></a>JPEG的编码过程</h2><p>编码流程如下图：<br><img src="http://ww4.sinaimg.cn/large/8b331ee1gw1fb2c7jxxyaj20eg08d74o.jpg" alt="编码流程示意图"></p>
-<p><br><br><br><br><br></p>
-<h3 id="1-色彩空间转换"><a href="#1-色彩空间转换" class="headerlink" title="1.色彩空间转换"></a>1.色彩空间转换</h3><p>将RGB色彩空间转换到其他色彩空间，比如<a href="https://en.wikipedia.org/wiki/YUV" target="_blank" rel="external">YUV</a>色彩空间。<br>出现YUV,主要有两个原因，一个是为了让彩色信号兼容黑白电视机，另外一个原因是为了减少传输的带宽。<br>下图为老电视后面的色差接口。<br><img src="http://ww3.sinaimg.cn/large/8b331ee1gw1fb24juusowj206u046q3w.jpg" alt="电视色差接口"><br>YUV中，Y表示亮度，U和V表示色度，总之它是将RGB信号进行了一种处理，根据人对亮度更敏感些，增加亮度的信号，减少颜色的信号，以这样“欺骗”人的眼睛的手段来节省空间。YUV的格式也很多，不过常见的就是422和420格式。</p>
-<p>下图为420格式，每四个Y共用一组UV分量，每个YUV分量和RGB一样都用8位来表示，YUV色彩空间就比RGB色彩空间所需的存储空间少一半，数据就被压缩到了一半。<br><img src="http://ww4.sinaimg.cn/large/8b331ee1gw1fb24kvqketj20aa04n3zt.jpg" alt="Y420"></p>
-<p><br><br><br><br><br></p>
-<h3 id="2-离散余弦变换DCT"><a href="#2-离散余弦变换DCT" class="headerlink" title="2.离散余弦变换DCT"></a>2.离散余弦变换DCT</h3><p>简单地说，DCT是傅里叶变换的一种，变换后会得到一个系数。<br>有关DCT的详细介绍可以看这个<a href="https://www.youtube.com/watch?v=Q2aEzeMDHMA" target="_blank" rel="external">视频</a>。</p>
-<p>在JPEG压缩过程中，经过颜色空间的转换，每一个色值表示成8X8的图像块，下图为一个色彩域取样块，转化为频率域的DCT系数块：<br><img src="http://ww1.sinaimg.cn/large/8b331ee1gw1fb24n45lgbj20gv03qq3u.jpg" alt="转化为频率域的DCT系数块"></p>
-<p>图片经过此步骤会输出一个频率系数矩阵，左上的系数幅度值最大，越往右下，系数的幅度值越小，频率越高。大部分图片信息都在频率域矩阵左上区域，右下几乎不含有图片信息，甚至只含杂波。<br>注意：转换后的DCT系数块矩阵(x,y)处的值并不和转换前的颜色空间矩阵（x,y）处的像素值直接对应。</p>
-<p>这一步骤没有压缩作用，它目的是为下一步骤找低频和高频区域，也就是找出留下的区域和舍去的区域。</p>
-<p><br><br><br><br><br></p>
-<h3 id="3-量化"><a href="#3-量化" class="headerlink" title="3.量化"></a>3.量化</h3><p>此步是将上步求得的DCT系数的简化的过程，利用人眼对高频部分不敏感的特性来舍去高频部分。<br>这里有两张表分别对亮度和色度做量化处理。</p>
-<p>标准亮度量化表：<br><img src="http://ww3.sinaimg.cn/large/8b331ee1gw1fb24qq7yq0j20sw0b8t9r.jpg" alt="标准亮度量化表"></p>
-<p>标准色度量化表：<br><img src="http://ww2.sinaimg.cn/large/8b331ee1gw1fb24rftccuj20sy0b8gmn.jpg" alt="标准色度量化表"></p>
-<p>量化表是控制 JPEG 压缩比的关键。<br>DCT系数矩阵中的不同位置的值代表了图像数据中不同频率的分量，这两张表中的数据是根据人眼对不同频率的敏感程度的差别所积累下的经验制定的。这个步骤除掉了一些高频量, 损失了很多细节. 但事实上人眼对高空间频率远没有低频敏感.所以处理后的视觉损失很小。<br>另一个重要原因是所有的图片的点与点之间会有一个色彩过渡的过程. 大量的图象信息被包含在低空间频率中。 经过量化处理后, 在高空间频率段, 将出现大量连续的零。</p>
-<p>把上面的DCT系数块通过量化后的结果如下图，其中第一个数-26是直流DC部分，它是一块图象样本的平均值，包含了原始8x8图像块中的很多能量，其余的是交流AC部分。<br>计算方法为：频率系数矩阵的数值除以对应量化表位置上的数值，并四舍五入到最近的整数。<br><img src="http://ww4.sinaimg.cn/large/8b331ee1gw1fb24usawejg20ie034t8o.gif" alt="量化过程"></p>
-<p>解码的时候，反量化步骤会乘回量化表相应值，但是四舍五入导致低频有所损失，高频0字段被舍弃。此步为有损运算，会导致图像质量变低。所以说JPEG是有损编码。</p>
-<p><br><br><br><br><br></p>
-<h3 id="4-zig-zag游程编码"><a href="#4-zig-zag游程编码" class="headerlink" title="4.zig-zag游程编码"></a>4.zig-zag游程编码</h3><p>量化后的数据还可以进行简化，更大程度的去压缩。<br><img src="http://ww4.sinaimg.cn/large/8b331ee1gw1fb251cuevrj20fe0bq0tg.jpg" alt="zig-zag表"></p>
-<p>根据上面的zig-zag表重排数据的过程：<br><img src="http://ww4.sinaimg.cn/large/8b331ee1gw1fb255f7vvsj208s05mq38.jpg" alt="zig-zag过程"><br>根据ZigZag表的规则对量化后的数据进行重排后的结果中可以看到出现连续的多个0，这样有利于进行游程编码。</p>
-<p><br><br><br><br><br></p>
-<h3 id="5-范式Huffman编码"><a href="#5-范式Huffman编码" class="headerlink" title="5.范式Huffman编码"></a>5.范式Huffman编码</h3><h4 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h4><p>huffman编码的基本原理是根据数据中元素的使用频率，调整元素的编码长度，以得到更高的压缩比。<br>举个例子，比如下面这段数据</p>
-<p><code>AABCBABBCDBBDDBAABDBBDABBBBDDEDBD</code></p>
-<p>这段数据里面包含了33个字符，每种字符出现的次数统计如下</p>
-<table>
-<thead>
-<tr>
-<th>字符</th>
-<th>A</th>
-<th>B</th>
-<th>C</th>
-<th>D</th>
-<th>E</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>次数</td>
-<td>6</td>
-<td>15</td>
-<td>2</td>
-<td>9</td>
-<td>1</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>如果我们用我们常见的定长编码，因为有5个文字，可以用3个bit表示，那么这段文字共需要3*33 = 99个bit来保存</p>
-<table>
-<thead>
-<tr>
-<th>字符</th>
-<th>A</th>
-<th>B</th>
-<th>C</th>
-<th>D</th>
-<th>E</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>编码</td>
-<td>001</td>
-<td>010</td>
-<td>011</td>
-<td>100</td>
-<td>101</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>如果根据字符出现的概率，使用如下的编码</p>
-<table>
-<thead>
-<tr>
-<th>字符</th>
-<th>A</th>
-<th>B</th>
-<th>C</th>
-<th>D</th>
-<th>E</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>编码</td>
-<td>100</td>
-<td>0</td>
-<td>1110</td>
-<td>10</td>
-<td>1111</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>那么这段文字共需要3<em>6 + 1</em>15 + 4<em>2 + 2</em>9 + 4*1 = 63bit，压缩比为63%。 是较短的编码不能够是较长编码的前缀，比如上面这个编码，就是由下面的这颗二叉树生成的。<br>哈弗曼编码一般都是使用二叉树来生成的，频率会高的数据对应的树节点的位置越高。这样得到的编码符合前缀规则，也就是较短的编码不能够是较长编码的前缀。</p>
-<p><img src="http://ww4.sinaimg.cn/large/8b331ee1gw1fb25jyerm4j207h0760sr.jpg" alt="哈夫曼树"></p>
-<p><br></p>
-<h4 id="Huffman编码在JPEG中"><a href="#Huffman编码在JPEG中" class="headerlink" title="Huffman编码在JPEG中"></a>Huffman编码在JPEG中</h4><p>假设在JPEG量化处理后的数据为：<br><code>35,7,0,0,0,-6,-2,0,0,-9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0,…,0</code></p>
-<p>根据<a href="https://en.wikipedia.org/wiki/Run-length_encoding" target="_blank" rel="external">RLE</a>编码(游程编码)规则<br>1、用固定的4位来存储重复的数量，所以最多重复内容可以记录数量为15，超过15次要进行分段处理；<br>2、只将0作为重复的内容，每个数值记录前面有多少重复的0，末尾如果都是0用EOB作为代表；<br>3、此步不包含第一个数值，第一个数为直流系数，此步只处理交流系数。<br>得到处理结果：</p>
-<p><img src="http://ww1.sinaimg.cn/large/8b331ee1gw1fb262lkvzaj21kw048ab4.jpg" alt="RLE编码"><br><br><br><br> </p>
-<p>为了提高储存效率, JPEG 里并不直接保存数值, 而是将数值按位数分成 16 组,JPEG提供了一张标准的码表用于对这些数字编码<br><img src="http://ww3.sinaimg.cn/large/8b331ee1gw1fb263fusn6j210w0he768.jpg" alt="标准码表"></p>
-<p>举例来说，第3个单元中的“-6”这个数字，在表中的位置是长度为3的那组，所对应的bit码是“001”，由于这种编码附带长度信息，所以我们的数据变成了如下的格式。<br><img src="http://ww4.sinaimg.cn/large/8b331ee1gw1fb265nsj1aj21kw065jt8.jpg" alt="BIT编码"><br><br><br><br> </p>
-<p>对于括号前面的数字的编码，分成DC编码和AC编码。<br>下表是针对直流(DC)部分即第一个数字的哈弗曼表，由于直流部分没有前置的0，所以取值范围在0~15之间。</p>
-<p><img src="http://ww2.sinaimg.cn/mw690/8b331ee1gw1fb26bixac2j20pc0nugmw.jpg" alt=""></p>
-<p>对于其余的交流（AC）部分，取值范围在0~255，哈夫曼表如下：</p>
-<p><img src="http://ww4.sinaimg.cn/mw690/8b331ee1gw1fb26bvyx0oj20q211e410.jpg" alt=""></p>
-<p><br><br><br><br>完整个编码过程如下表，最终的数据使用10个字节保存了原本长度为64字节的数据，JPEG的压缩算法完成。<br><img src="http://ww2.sinaimg.cn/large/8b331ee1gw1fb268ej9k9j21kw09yn0a.jpg" alt=""></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="http://blog.mrriddler.com/2016/07/20/%E5%9B%BE%E7%89%87%E4%B9%8B%E6%97%85/" target="_blank" rel="external">http://blog.mrriddler.com/2016/07/20/%E5%9B%BE%E7%89%87%E4%B9%8B%E6%97%85/</a></li>
-<li><a href="http://thecodeway.com/blog/?p=69" target="_blank" rel="external">http://thecodeway.com/blog/?p=69</a></li>
-<li><a href="http://www.impulseadventure.com/photo/jpeg-huffman-coding.html" target="_blank" rel="external">http://www.impulseadventure.com/photo/jpeg-huffman-coding.html</a></li>
-<li>《数字图像处理编程入门》</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;各种图片格式目的是在网络传输和存储的时候使用更少的字节，即起到压缩的作用。在图片格式解码后，无论图片的格式，图片数据都是像素数组。&lt;br&gt;本文将尝试通过JPEG这种图片编码格式的学习，了解图片编码的秘密。&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h
-    
-    </summary>
-    
-      <category term="图形学" scheme="https://The-Coderz.github.io/categories/%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
     
   </entry>
