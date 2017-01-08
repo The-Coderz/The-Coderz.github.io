@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>【2017-01-08 cobertura】 | The Coders</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="coberturacobertura website&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;cobertura是一个用于分析Java单测覆盖率的工具，我按照自己maven工程配置，来说下吧。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;也不知道为什么，反正我官网没有打开过，资料也不多
+
+参考文档&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【2017-01-08 cobertura】">
+<meta property="og:url" content="https://The-Coderz.github.io/2017/01/08/2017-01-08-cobertura/index.html">
+<meta property="og:site_name" content="The Coders">
+<meta property="og:description" content="coberturacobertura website&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;cobertura是一个用于分析Java单测覆盖率的工具，我按照自己maven工程配置，来说下吧。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;也不知道为什么，反正我官网没有打开过，资料也不多
+
+参考文档&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbs">
+<meta property="og:image" content="https://The-Coderz.github.io/images/2017/01/08/cobertura执行.png">
+<meta property="og:image" content="https://The-Coderz.github.io/images/2017/01/08/cobertura统计结果.png">
+<meta property="og:image" content="https://The-Coderz.github.io/images/2017/01/08/stackoverflow-cobertura-ignore-vs-exclude.png">
+<meta property="og:updated_time" content="2017-01-08T07:51:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【2017-01-08 cobertura】">
+<meta name="twitter:description" content="coberturacobertura website&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;cobertura是一个用于分析Java单测覆盖率的工具，我按照自己maven工程配置，来说下吧。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;也不知道为什么，反正我官网没有打开过，资料也不多
+
+参考文档&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbs">
+<meta name="twitter:image" content="https://The-Coderz.github.io/images/2017/01/08/cobertura执行.png">
+  
+    <link rel="alternate" href="/atom.xml" title="The Coders" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">The Coders</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://The-Coderz.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2017-01-08-cobertura" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/08/2017-01-08-cobertura/" class="article-date">
+  <time datetime="2017-01-08T07:14:31.000Z" itemprop="datePublished">2017-01-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【2017-01-08 cobertura】
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="cobertura"><a href="#cobertura" class="headerlink" title="cobertura"></a>cobertura</h2><h3 id="cobertura-website"><a href="#cobertura-website" class="headerlink" title="cobertura website"></a><a href="http://cobertura.sourceforge.net/" target="_blank" rel="external">cobertura website</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cobertura是一个用于分析Java单测覆盖率的工具，我按照自己maven工程配置，来说下吧。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>也不知道为什么，反正我官网没有打开过，资料也不多</strong></p>
+<hr>
+<h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.mojohaus.org/cobertura-maven-plugin/" target="_blank" rel="external">apache maven plugin</a>，这个可以打开😂。</p>
+<h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;plugin&gt;</div><div class="line">  &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;cobertura-maven-plugin&lt;/artifactId&gt;</div><div class="line">  &lt;version&gt;$&#123;cobertura.version&#125;&lt;/version&gt;</div><div class="line">  &lt;configuration&gt;</div><div class="line">    &lt;instrumentation&gt;</div><div class="line">      &lt;includes&gt;			// 规定计算哪一部分的单测覆盖率，如DAO的覆盖率没必要计算</div><div class="line">        &lt;include&gt;com/van/service/**/*.class&lt;/include&gt;</div><div class="line">      &lt;/includes&gt;</div><div class="line">    &lt;/instrumentation&gt;</div><div class="line">  &lt;/configuration&gt;</div><div class="line">&lt;/plugin&gt;</div></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 按照上面的pom配置，cobertura只会计算com.van.service.**.*.class的单测覆盖率。同理，还可以配置<excludes>标签来排除不需要计算的类。  </excludes></p>
+<h3 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h3><p><code>mvn -B cobertura:cobertura -Dmaven.test.failure.ignore=true</code><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  执行上述命令，会在对应的targe/sit/cobertura/下生成需要的内容，打开对应的index.html即可以看到单测覆盖率。    </p>
+<center><br><img src="/images/2017/01/08/cobertura执行.png" alt="cobertura命令执行"><br><br><img src="/images/2017/01/08/cobertura统计结果.png" alt="cobertura统计结果"><br></center>
+
+<h3 id="值得注意"><a href="#值得注意" class="headerlink" title="值得注意"></a>值得注意</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 值得注意的是，在我自己的测试(mavne:3, cobertura-maven-plugin:5.0.2)和stack overflow上的提问中，都有类似的情况：cobertura的<ignore>标签在maven中似乎没有什么作用，不过有<include>、<exclude>应该也能满足要求。<br><a href="http://stackoverflow.com/questions/25900958/cobertura-exclude-vs-ignore" target="_blank" rel="external">stack overflow - cobertura-exclude-vs-ignore</a></exclude></include></ignore></p>
+<center><br><img src="/images/2017/01/08/stackoverflow-cobertura-ignore-vs-exclude.png" alt="cobertura stack overflow ignore vs exclude"><br></center>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://The-Coderz.github.io/2017/01/08/2017-01-08-cobertura/" data-id="cixod2drt000abjahmknm9e7d" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/01/08/Stetho工具介绍/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Stetho工具介绍</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/图形学/">图形学</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具-python/">工具 python</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/工具-python/" style="font-size: 10px;">工具 python</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/01/08/2017-01-08-cobertura/">【2017-01-08 cobertura】</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/08/Stetho工具介绍/">Stetho工具介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/08/Python断点调试/">Python断点调试</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/05/2017-01-05-powermock/">【2017-01-05-powermock】</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/05/2016-12-27-通过trace文件定位耗时操作/">使用TraceView工具定位耗时操作</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 The-Coders<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

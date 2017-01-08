@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://The-Coderz.github.io/"/>
-  <updated>2017-01-08T06:42:43.000Z</updated>
+  <updated>2017-01-08T07:51:11.000Z</updated>
   <id>https://The-Coderz.github.io/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【2017-01-08 cobertura】</title>
+    <link href="https://The-Coderz.github.io/2017/01/08/2017-01-08-cobertura/"/>
+    <id>https://The-Coderz.github.io/2017/01/08/2017-01-08-cobertura/</id>
+    <published>2017-01-08T07:14:31.000Z</published>
+    <updated>2017-01-08T07:51:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="cobertura"><a href="#cobertura" class="headerlink" title="cobertura"></a>cobertura</h2><h3 id="cobertura-website"><a href="#cobertura-website" class="headerlink" title="cobertura website"></a><a href="http://cobertura.sourceforge.net/" target="_blank" rel="external">cobertura website</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cobertura是一个用于分析Java单测覆盖率的工具，我按照自己maven工程配置，来说下吧。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>也不知道为什么，反正我官网没有打开过，资料也不多</strong></p>
+<hr>
+<h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.mojohaus.org/cobertura-maven-plugin/" target="_blank" rel="external">apache maven plugin</a>，这个可以打开😂。</p>
+<h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;plugin&gt;</div><div class="line">  &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;cobertura-maven-plugin&lt;/artifactId&gt;</div><div class="line">  &lt;version&gt;$&#123;cobertura.version&#125;&lt;/version&gt;</div><div class="line">  &lt;configuration&gt;</div><div class="line">    &lt;instrumentation&gt;</div><div class="line">      &lt;includes&gt;			// 规定计算哪一部分的单测覆盖率，如DAO的覆盖率没必要计算</div><div class="line">        &lt;include&gt;com/van/service/**/*.class&lt;/include&gt;</div><div class="line">      &lt;/includes&gt;</div><div class="line">    &lt;/instrumentation&gt;</div><div class="line">  &lt;/configuration&gt;</div><div class="line">&lt;/plugin&gt;</div></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 按照上面的pom配置，cobertura只会计算com.van.service.**.*.class的单测覆盖率。同理，还可以配置<excludes>标签来排除不需要计算的类。  </excludes></p>
+<h3 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h3><p><code>mvn -B cobertura:cobertura -Dmaven.test.failure.ignore=true</code><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  执行上述命令，会在对应的targe/sit/cobertura/下生成需要的内容，打开对应的index.html即可以看到单测覆盖率。    </p>
+<center><br><img src="/images/2017/01/08/cobertura执行.png" alt="cobertura命令执行"><br><br><img src="/images/2017/01/08/cobertura统计结果.png" alt="cobertura统计结果"><br></center>
+
+<h3 id="值得注意"><a href="#值得注意" class="headerlink" title="值得注意"></a>值得注意</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 值得注意的是，在我自己的测试(mavne:3, cobertura-maven-plugin:5.0.2)和stack overflow上的提问中，都有类似的情况：cobertura的<ignore>标签在maven中似乎没有什么作用，不过有<include>、<exclude>应该也能满足要求。<br><a href="http://stackoverflow.com/questions/25900958/cobertura-exclude-vs-ignore" target="_blank" rel="external">stack overflow - cobertura-exclude-vs-ignore</a></exclude></include></ignore></p>
+<center><br><img src="/images/2017/01/08/stackoverflow-cobertura-ignore-vs-exclude.png" alt="cobertura stack overflow ignore vs exclude"><br></center>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;cobertura&quot;&gt;&lt;a href=&quot;#cobertura&quot; class=&quot;headerlink&quot; title=&quot;cobertura&quot;&gt;&lt;/a&gt;cobertura&lt;/h2&gt;&lt;h3 id=&quot;cobertura-website&quot;&gt;&lt;a href=&quot;#cobertur
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://The-Coderz.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>Stetho工具介绍</title>
@@ -112,7 +143,7 @@
     <link href="https://The-Coderz.github.io/2017/01/05/2017-01-05-powermock/"/>
     <id>https://The-Coderz.github.io/2017/01/05/2017-01-05-powermock/</id>
     <published>2017-01-04T17:33:50.000Z</published>
-    <updated>2017-01-08T07:09:34.000Z</updated>
+    <updated>2017-01-08T07:17:05.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="PowerMock"><a href="#PowerMock" class="headerlink" title="PowerMock"></a>PowerMock</h2><h3 id="PowerMock-github-project"><a href="#PowerMock-github-project" class="headerlink" title="PowerMock github project"></a><a href="https://github.com/powermock/powermock" target="_blank" rel="external">PowerMock github project</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PowerMock是一个强大的测试框架，它集成了Mockito、EasyMock等测试框架，在基于这些框架的基础上，利用修改字节码的手段mock静态方法、私有方法、初始化方法，是一种对过去熟悉的测试框架的增强扩张。</p>
 <hr>
