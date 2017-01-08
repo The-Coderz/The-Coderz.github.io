@@ -17,15 +17,15 @@
 
 使用
 引入PowerMock的jar包，需要">
-<meta property="og:image" content="https://The-Coderz.github.io/images/2017/01/08/PowerMock运行结果.png">
-<meta property="og:updated_time" content="2017-01-08T06:42:43.000Z">
+<meta property="og:image" content="https://The-Coderz.github.io/images/2017/01/08/powermock运行结果.png">
+<meta property="og:updated_time" content="2017-01-08T07:09:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【2017-01-05-powermock】">
 <meta name="twitter:description" content="PowerMockPowerMock github project&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;PowerMock是一个强大的测试框架，它集成了Mockito、EasyMock等测试框架，在基于这些框架的基础上，利用修改字节码的手段mock静态方法、私有方法、初始化方法，是一种对过去熟悉的测试框架的增强扩张。
 
 使用
 引入PowerMock的jar包，需要">
-<meta name="twitter:image" content="https://The-Coderz.github.io/images/2017/01/08/PowerMock运行结果.png">
+<meta name="twitter:image" content="https://The-Coderz.github.io/images/2017/01/08/powermock运行结果.png">
   
     <link rel="alternate" href="/atom.xml" title="The Coders" type="application/atom+xml">
   
@@ -109,14 +109,14 @@
 <h4 id="被测试类调用的静态方法"><a href="#被测试类调用的静态方法" class="headerlink" title="被测试类调用的静态方法"></a>被测试类调用的静态方法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.van.util;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Wuha on 2017/1/8.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserUtil</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">theStaticMethod</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// some logic</span></div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"static method mock failed."</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="测试类"><a href="#测试类" class="headerlink" title="测试类"></a>测试类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.van.test;</div><div class="line"></div><div class="line"><span class="keyword">import</span> com.van.UserDAO;</div><div class="line"><span class="keyword">import</span> com.van.service.UserService;</div><div class="line"><span class="keyword">import</span> com.van.service.impl.UserServiceImpl;</div><div class="line"><span class="keyword">import</span> com.van.util.UserUtil;</div><div class="line"><span class="keyword">import</span> org.junit.Assert;</div><div class="line"><span class="keyword">import</span> org.junit.Before;</div><div class="line"><span class="keyword">import</span> org.junit.Test;</div><div class="line"><span class="keyword">import</span> org.junit.runner.RunWith;</div><div class="line"><span class="keyword">import</span> org.mockito.*;</div><div class="line"><span class="keyword">import</span> org.powermock.api.mockito.PowerMockito;</div><div class="line"><span class="keyword">import</span> org.powermock.core.classloader.annotations.PrepareOnlyThisForTest;</div><div class="line"><span class="keyword">import</span> org.powermock.modules.junit4.PowerMockRunner;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.File;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Wuha on 2017/1/8.</div><div class="line"> */</div><div class="line"><span class="meta">@RunWith</span>(PowerMockRunner.class)     <span class="comment">// 测试运行于PowerMock测试框架下,加载特定对象、清除MockRepository等</span></div><div class="line"><span class="meta">@PrepareOnlyThisForTest</span>(&#123;UserUtil.class, UserServiceImpl.class&#125;)    <span class="comment">// 该在注解标明了需要用PowerMock字节码增强的类,如:mock静态方法、final域、私有方法等</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserServiceTest</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String EXPECTED_STRING = <span class="string">"Hello world."</span>;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Long EXPECTED_LONG = -<span class="number">1L</span>;</div><div class="line"></div><div class="line">    <span class="meta">@Mock</span>                           <span class="comment">// mock 一个UserDAO类</span></div><div class="line">    <span class="keyword">private</span> UserDAO uerDAO;</div><div class="line"></div><div class="line">    <span class="meta">@Mock</span></div><div class="line">    <span class="keyword">private</span> File mockFile;</div><div class="line"></div><div class="line">    <span class="meta">@Spy</span>  <span class="comment">// spy 一个类,这个注解产生的类,如果不去mock方法,那么在运行它的时候,会调用实际的方法,这点和mockObject.thenCallRealMethod()效果一样</span></div><div class="line">    <span class="meta">@InjectMocks</span>    <span class="comment">// 由于UserService利用了@Autowired注解,而没有public的setter方法,该注解可以帮助吧userDAO给set到service中</span></div><div class="line">    <span class="keyword">private</span> UserService userService = <span class="keyword">new</span> UserServiceImpl(EXPECTED_LONG, EXPECTED_STRING);</div><div class="line"></div><div class="line">    <span class="meta">@Before</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUp</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        <span class="comment">/**</span></div><div class="line">         * 对注解的对象进行语义逻辑处理</div><div class="line">         */</div><div class="line">        MockitoAnnotations.initMocks(<span class="keyword">this</span>);</div><div class="line">        <span class="comment">/**</span></div><div class="line">         * mock处理静态类</div><div class="line">         */</div><div class="line">        PowerMockito.mockStatic(UserUtil.class);</div><div class="line"></div><div class="line">        <span class="comment">/**</span></div><div class="line">         * mock some method</div><div class="line">         */</div><div class="line">        PowerMockito.when(mockFile.exists()).thenReturn(<span class="keyword">true</span>);</div><div class="line">        <span class="comment">/**</span></div><div class="line">         * mock一个construct方法</div><div class="line">         */</div><div class="line">        PowerMockito.whenNew(File.class).withArguments(Mockito.anyString()).thenReturn(mockFile);</div><div class="line">        <span class="comment">/**</span></div><div class="line">         * mock static method, the private method mock is the same</div><div class="line">         */</div><div class="line">        PowerMockito.doNothing().when(UserUtil.class, <span class="string">"theStaticMethod"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Test</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testThePublicMethod</span><span class="params">()</span> </span>&#123;</div><div class="line">        Assert.assertEquals(EXPECTED_STRING, userService.thePublicMethod());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
-<h3 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h3><center><br><img src="/images/2017/01/08/PowerMock运行结果.png" alt="PowerMock运行结果"><br></center>
+<h3 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h3><center><br><img src="/images/2017/01/08/powermock运行结果.png" alt="PowerMock运行结果"><br></center>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;按照代码中的逻辑，如果没被mock，则会抛出异常。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://The-Coderz.github.io/2017/01/05/2017-01-05-powermock/" data-id="cixob5sl00008hyahhwiov1ik" class="article-share-link">Share</a>
+      <a data-url="https://The-Coderz.github.io/2017/01/05/2017-01-05-powermock/" data-id="cixobm1z600037fahh4fsn2a2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
@@ -137,9 +137,9 @@
     </a>
   
   
-    <a href="/2017/01/05/simple-mock-api/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/01/05/2016-12-27-通过trace文件定位耗时操作/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">simple-mock-api</div>
+      <div class="article-nav-title">使用TraceView工具定位耗时操作</div>
     </a>
   
 </nav>
@@ -209,11 +209,11 @@
           </li>
         
           <li>
-            <a href="/2017/01/05/simple-mock-api/">simple-mock-api</a>
+            <a href="/2017/01/05/2016-12-27-通过trace文件定位耗时操作/">使用TraceView工具定位耗时操作</a>
           </li>
         
           <li>
-            <a href="/2017/01/05/2016-12-27-通过trace文件定位耗时操作/">使用TraceView工具定位耗时操作</a>
+            <a href="/2017/01/05/simple-mock-api/">simple-mock-api</a>
           </li>
         
       </ul>
