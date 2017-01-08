@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>【2016-12-02 Java编码小结】 | The Coders</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;编码问题一直都是令程序员捉摸不透的东西，因为它被越来越透明化：程序中默认用OS的字符集、许多文件开头都有编码格式的约定……这就导致一旦遇到乱码的现象，就让人无从下手，所以在了解了一部分知识和实现之后，我想对Java的编码做一下小结，方便日后自己查阅。
+
+名词解释
+编码：首先，“编码”一词通常是作为动词，即把一种符号序列通过某">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【2016-12-02 Java编码小结】">
+<meta property="og:url" content="https://The-Coderz.github.io/2016/12/03/2016-12-02-Java编码小结/index.html">
+<meta property="og:site_name" content="The Coders">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;编码问题一直都是令程序员捉摸不透的东西，因为它被越来越透明化：程序中默认用OS的字符集、许多文件开头都有编码格式的约定……这就导致一旦遇到乱码的现象，就让人无从下手，所以在了解了一部分知识和实现之后，我想对Java的编码做一下小结，方便日后自己查阅。
+
+名词解释
+编码：首先，“编码”一词通常是作为动词，即把一种符号序列通过某">
+<meta property="og:image" content="https://The-Coderz.github.io/images/2016/12/04/001.png">
+<meta property="og:image" content="https://The-Coderz.github.io/images/2016/12/04/002.png">
+<meta property="og:updated_time" content="2016-12-04T01:15:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【2016-12-02 Java编码小结】">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;编码问题一直都是令程序员捉摸不透的东西，因为它被越来越透明化：程序中默认用OS的字符集、许多文件开头都有编码格式的约定……这就导致一旦遇到乱码的现象，就让人无从下手，所以在了解了一部分知识和实现之后，我想对Java的编码做一下小结，方便日后自己查阅。
+
+名词解释
+编码：首先，“编码”一词通常是作为动词，即把一种符号序列通过某">
+<meta name="twitter:image" content="https://The-Coderz.github.io/images/2016/12/04/001.png">
+  
+    <link rel="alternate" href="/atom.xml" title="The Coders" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">The Coders</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://The-Coderz.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2016-12-02-Java编码小结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/03/2016-12-02-Java编码小结/" class="article-date">
+  <time datetime="2016-12-03T01:43:18.000Z" itemprop="datePublished">2016-12-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【2016-12-02 Java编码小结】
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编码问题一直都是令程序员捉摸不透的东西，因为它被越来越透明化：程序中默认用OS的字符集、许多文件开头都有编码格式的约定……这就导致一旦遇到乱码的现象，就让人无从下手，所以在了解了一部分知识和实现之后，我想对Java的编码做一下小结，方便日后自己查阅。</p>
+<hr>
+<h3 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h3><ul>
+<li>编码：首先，“编码”一词通常是作为动词，即<strong>把一种符号序列通过某种规约转化为另一种符号序列，且语义保持一致</strong>（我自己定义的）；</li>
+<li>解码：编码的反向过程；</li>
+<li>二进制：在计算机中，信息的表示最小单位为位，由0或1组成，这一特性是通过电信号的有无来决定的；</li>
+<li>字节：计算机存储信息的最小单位，一个字节(Byte)=8位(bit)；</li>
+<li>字符：这是带有人类能读懂语义的最小单位，如:A,我；</li>
+<li>字符集：用来将“字节解码为字符”或“字符编码为字节”的人类规约，有多种规约，如：ANSI、GBK、UTF-8、UTF-16、iso-8859-1等；  </li>
+</ul>
+<hr>
+<h3 id="Java编码"><a href="#Java编码" class="headerlink" title="Java编码"></a>Java编码</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 这个标题起得好像有些奇怪，因为它歧义特别多，由于本文是按照我的思路来写的，也就勉为其难地跟着我的学习思路走吧 ：）。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 首先，很多人（比如我）就会遇到第一个混淆的概念：Java编码=&gt;指的是Java的什么编码：  </p>
+<ol>
+<li>Java编译：在没有指定编译时的编码时，Java采用Unicode编码。这意味着，Java编译器会将当前代码的编码转换为Unicode统一编码，这样，在不同环境下，.class文件都能正确地输出文件内容；  </li>
+<li>JVM的编码格式：在没有指定JVM的编码格式时，Java程序将会用OS的默认编码；</li>
+</ol>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 当对这两点有所区分之后，我们就可以细细考究某一个代码片段造成的乱码问题了。但是请稍等，我们再来说说Java中的char和Byte吧？  </p>
+<h4 id="char类型"><a href="#char类型" class="headerlink" title="char类型"></a>char类型</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我们要了解，存储在磁盘上的内容都是经过编码后的内容，此时就要我们明确以某种方式读取（解码）为char类型。其实说到底，字符类型（char）无非就是对字节类型（byte）的某种组合。由于二进制（bit）到字节（byte），其实只是磁盘文件到内存的直接映射（这个直接映射表示没有什么改变，而不是物理存储上的某种关系），所以不需要做什么编码的操作。但是从字节（byte）到字符（char），就需要做编码的操作，来确定谋者映射关系，从而打印到屏幕上能被人类所理解（这不就是最终目标吗）。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 首先，我们知道Java是一门OOP语言，它对动作的封装其实挺全面的，不过正是因为它的透明性，导致我对期间的编码一知半解，所以，了解它的结构，还是很有必要的。char类型的实体在Java中占有<strong>两个字节大小，用来表示Unicode解码后的字符</strong>，下面我们来对应比下C++和Java中字符和字节的表示类型：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型或操作</th>
+<th style="text-align:center">C++</th>
+<th style="text-align:center">Java</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">字节</td>
+<td style="text-align:center">char</td>
+<td style="text-align:center">byte</td>
+</tr>
+<tr>
+<td style="text-align:left">字符</td>
+<td style="text-align:center">wchar_t</td>
+<td style="text-align:center">char</td>
+</tr>
+<tr>
+<td style="text-align:left">ANSI字符串</td>
+<td style="text-align:center">char[]</td>
+<td style="text-align:center">byte[]</td>
+</tr>
+<tr>
+<td style="text-align:left">Unicode字符串</td>
+<td style="text-align:center">wchar_t[]</td>
+<td style="text-align:center">String</td>
+</tr>
+<tr>
+<td style="text-align:left">字符串=&gt;字节串</td>
+<td style="text-align:center">wcstombs(), WideCharToMultiByte()</td>
+<td style="text-align:center">String.getBytes(encoding)</td>
+</tr>
+<tr>
+<td style="text-align:left">字节串=&gt;字符串</td>
+<td style="text-align:center">mbstowcs(), MultiByteToWideChar()</td>
+<td style="text-align:center">new String(bytes,encoding)</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 要注意c/c++的char类型和Java中char类型的区别，不要“一视同仁”。</p>
+<p><img src="/images/2016/12/04/001.png" alt="Java IO读"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 从这张UML图中，我们了解到，Java通过InputStreamReader类这个桥梁，来实现字节到字符的转换，即解码的过程，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">InputStream fileByteInputStream = <span class="keyword">new</span> FileInputStream(<span class="string">"/xx/xx/xx.txt"</span>);</div><div class="line">InputStreamReader fileInputStreamReader = <span class="keyword">new</span> InputStreamReader(fileByteInputStream, <span class="string">"GBK"</span>);  <span class="comment">// 以GBK的方式解码二进制流</span></div><div class="line">BufferedReader reader = <span class="keyword">new</span> BufferedReader(fileInputStreamReader);</div></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 同理，Java IO中的写也有char到byte的桥梁:  </p>
+<p><img src="/images/2016/12/04/002.png" alt="Java IO写">  </p>
+<h4 id="String对象"><a href="#String对象" class="headerlink" title="String对象"></a>String对象</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String对象被叫做字符串对象，其内部是存储了一个char[]数组，这意味着，这些字符都是经过特定解码的：  </p>
+<pre><code class="Java">String s = <span class="keyword">new</span> String(<span class="string">"你"</span>.getBytes(<span class="string">"GBK"</span>), <span class="string">"GBK"</span>);
+String a = <span class="keyword">new</span> String(<span class="string">"你"</span>.getBytes(<span class="string">"UTF-8"</span>));
+System.out.println(s);
+System.out.println(a);
+</code></pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 从上述代码片段中，我们可以看出两点：  </p>
+<ol>
+<li>Java编译，如果没有指定编码，则会使用Unicode，具体是UTF-8编码来存储到.class中；</li>
+<li>Java的String对象中存储的char[]都是用Unicode，具体是UTF-8来存储的。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://The-Coderz.github.io/2016/12/03/2016-12-02-Java编码小结/" data-id="cixoakrim0000khah2wsfc8dk" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/12/28/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          【2016-11-26 Hello World】
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/图形学/">图形学</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具-python/">工具 python</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/工具-python/" style="font-size: 10px;">工具 python</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/01/08/Stetho工具介绍/">Stetho工具介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/08/Python断点调试/">Python断点调试</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/05/2017-01-05-powermock/">【2017-01-05-powermock】</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/05/simple-mock-api/">simple-mock-api</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/05/2016-12-27-通过trace文件定位耗时操作/">使用TraceView工具定位耗时操作</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 The-Coders<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

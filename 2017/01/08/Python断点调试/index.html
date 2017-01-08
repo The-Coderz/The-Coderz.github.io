@@ -3,43 +3,46 @@
 <head>
   <meta charset="utf-8">
   
-  <title>使用TraceView工具定位耗时操作 | The Coders</title>
+  <title>Python断点调试 | The Coders</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="TraceView是DDMS中的工具，可以用来定位Android app中java方法的耗时操作。
-使用方法1.生成trace文件Eclipse中生成trace文件的方法：
-Android Studio生成trace文件的方法:
+  <meta name="description" content="很多项目是用python写构建脚本的，比如微信最近开源的终端跨平台组件 Mars本文将以mars为例简单介绍下如何用PyCharm对python进行断点调试。
 
-生成的trace文件将显示在Captures窗口
-直接把trace文件拖到安装了ADT插件的Eclipse就能打开。
-2.Timeline PanelTimeline展">
+导入代码open整个mars项目，切换合适的python版本，mars需要python2.7版本。
+打断点
+Debug it
+当代码中需要input时，切换到Console窗口输入
+
+用PyCharm调试跟Android Studio一样">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用TraceView工具定位耗时操作">
-<meta property="og:url" content="https://The-Coderz.github.io/2017/01/05/2016-12-27-通过trace文件定位耗时操作/index.html">
+<meta property="og:title" content="Python断点调试">
+<meta property="og:url" content="https://The-Coderz.github.io/2017/01/08/Python断点调试/index.html">
 <meta property="og:site_name" content="The Coders">
-<meta property="og:description" content="TraceView是DDMS中的工具，可以用来定位Android app中java方法的耗时操作。
-使用方法1.生成trace文件Eclipse中生成trace文件的方法：
-Android Studio生成trace文件的方法:
+<meta property="og:description" content="很多项目是用python写构建脚本的，比如微信最近开源的终端跨平台组件 Mars本文将以mars为例简单介绍下如何用PyCharm对python进行断点调试。
 
-生成的trace文件将显示在Captures窗口
-直接把trace文件拖到安装了ADT插件的Eclipse就能打开。
-2.Timeline PanelTimeline展">
-<meta property="og:image" content="http://ww4.sinaimg.cn/mw690/8b331ee1gw1fb5lfcb484j20zg0pmtf7.jpg">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/8b331ee1gw1fb5lgu5dsmj21kw0fmgpk.jpg">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/8b331ee1gw1fb5lx8hffej20a707jmxe.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/8b331ee1gw1fb5lrgshrqj21kw07jtbu.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/8b331ee1gw1fb5m32u3j6j21am0bcn0k.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/8b331ee1gw1fb5mewco9uj21kw0ngtsb.jpg">
-<meta property="og:updated_time" content="2017-01-04T17:09:24.000Z">
+导入代码open整个mars项目，切换合适的python版本，mars需要python2.7版本。
+打断点
+Debug it
+当代码中需要input时，切换到Console窗口输入
+
+用PyCharm调试跟Android Studio一样">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/8b331ee1gw1fbifkuh496j20h81f0q9j.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/8b331ee1gw1fbifke5anpj20xm0du0xi.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/8b331ee1gw1fbifnm18q9j20gk04gt94.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/8b331ee1gw1fbifo65ncyj20po0v6wm7.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/8b331ee1gw1fbifq7bsxlj20nm0e4jvb.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/8b331ee1gw1fbifqp5rcaj211q0lutf5.jpg">
+<meta property="og:updated_time" content="2017-01-08T06:32:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用TraceView工具定位耗时操作">
-<meta name="twitter:description" content="TraceView是DDMS中的工具，可以用来定位Android app中java方法的耗时操作。
-使用方法1.生成trace文件Eclipse中生成trace文件的方法：
-Android Studio生成trace文件的方法:
+<meta name="twitter:title" content="Python断点调试">
+<meta name="twitter:description" content="很多项目是用python写构建脚本的，比如微信最近开源的终端跨平台组件 Mars本文将以mars为例简单介绍下如何用PyCharm对python进行断点调试。
 
-生成的trace文件将显示在Captures窗口
-直接把trace文件拖到安装了ADT插件的Eclipse就能打开。
-2.Timeline PanelTimeline展">
-<meta name="twitter:image" content="http://ww4.sinaimg.cn/mw690/8b331ee1gw1fb5lfcb484j20zg0pmtf7.jpg">
+导入代码open整个mars项目，切换合适的python版本，mars需要python2.7版本。
+打断点
+Debug it
+当代码中需要input时，切换到Console窗口输入
+
+用PyCharm调试跟Android Studio一样">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/8b331ee1gw1fbifkuh496j20h81f0q9j.jpg">
   
     <link rel="alternate" href="/atom.xml" title="The Coders" type="application/atom+xml">
   
@@ -88,10 +91,10 @@ Android Studio生成trace文件的方法:
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-2016-12-27-通过trace文件定位耗时操作" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Python断点调试" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/01/05/2016-12-27-通过trace文件定位耗时操作/" class="article-date">
-  <time datetime="2017-01-04T17:09:24.000Z" itemprop="datePublished">2017-01-05</time>
+    <a href="/2017/01/08/Python断点调试/" class="article-date">
+  <time datetime="2017-01-08T06:32:41.000Z" itemprop="datePublished">2017-01-08</time>
 </a>
     
   </div>
@@ -102,7 +105,7 @@ Android Studio生成trace文件的方法:
         
   
     <h1 class="article-title" itemprop="name">
-      使用TraceView工具定位耗时操作
+      Python断点调试
     </h1>
   
 
@@ -110,29 +113,23 @@ Android Studio生成trace文件的方法:
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://developer.android.com/studio/profile/traceview.html" target="_blank" rel="external">TraceView</a>是DDMS中的工具，可以用来定位Android app中java方法的耗时操作。</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="1-生成trace文件"><a href="#1-生成trace文件" class="headerlink" title="1.生成trace文件"></a>1.生成trace文件</h3><p>Eclipse中生成trace文件的方法：<br><img src="http://ww4.sinaimg.cn/mw690/8b331ee1gw1fb5lfcb484j20zg0pmtf7.jpg" alt=""></p>
-<p><br><br>Android Studio生成trace文件的方法:</p>
-<p><img src="http://ww2.sinaimg.cn/large/8b331ee1gw1fb5lgu5dsmj21kw0fmgpk.jpg" alt=""></p>
-<p>生成的trace文件将显示在Captures窗口</p>
-<p><img src="http://ww2.sinaimg.cn/large/8b331ee1gw1fb5lx8hffej20a707jmxe.jpg" alt=""><br>直接把trace文件拖到安装了ADT插件的Eclipse就能打开。</p>
-<h3 id="2-Timeline-Panel"><a href="#2-Timeline-Panel" class="headerlink" title="2.Timeline Panel"></a>2.Timeline Panel</h3><p>Timeline展示各个线程占用CPU的情况。<br>横轴为从开始到结束trace的CPU时间，右边纵轴表示各个线程，每一横排表示线程占用CPU的情况。这里主要看主线程main</p>
-<p><img src="http://ww1.sinaimg.cn/large/8b331ee1gw1fb5lrgshrqj21kw07jtbu.jpg" alt=""></p>
-<p>放大后的效果如图，每个method用不同的颜色表示，展示CPU调用该方法到结束调用的时间。</p>
-<p><img src="http://ww1.sinaimg.cn/large/8b331ee1gw1fb5m32u3j6j21am0bcn0k.jpg" alt=""></p>
-<h3 id="3-Profile-Panel"><a href="#3-Profile-Panel" class="headerlink" title="3.Profile Panel"></a>3.Profile Panel</h3><p>Profile Panel展示了方法全名，方法耗时，调用次数，及方法的调用链关系。<br>在这里调用方法称为”parent”,被调方法称为”children”.</p>
-<p><img src="http://ww3.sinaimg.cn/large/8b331ee1gw1fb5mewco9uj21kw0ngtsb.jpg" alt=""></p>
+        <p>很多项目是用python写构建脚本的，比如微信最近开源的终端跨平台组件 <a href="https://github.com/Tencent/mars" target="_blank" rel="external">Mars</a><br>本文将以mars为例简单介绍下如何用<a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="external">PyCharm</a>对python进行断点调试。</p>
 <hr>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>《High Performance Android Apps》</p>
-<p><a href="https://developer.android.com/studio/profile/traceview.html" target="_blank" rel="external">https://developer.android.com/studio/profile/traceview.html</a></p>
+<h3 id="导入代码"><a href="#导入代码" class="headerlink" title="导入代码"></a>导入代码</h3><p>open整个mars项目，切换合适的python版本，mars需要python2.7版本。<br><img src="http://ww1.sinaimg.cn/large/8b331ee1gw1fbifkuh496j20h81f0q9j.jpg" alt=""><br><img src="http://ww2.sinaimg.cn/large/8b331ee1gw1fbifke5anpj20xm0du0xi.jpg" alt=""></p>
+<h3 id="打断点"><a href="#打断点" class="headerlink" title="打断点"></a>打断点</h3><p><img src="http://ww3.sinaimg.cn/large/8b331ee1gw1fbifnm18q9j20gk04gt94.jpg" alt=""></p>
+<h3 id="Debug-it"><a href="#Debug-it" class="headerlink" title="Debug it"></a>Debug it</h3><p><img src="http://ww1.sinaimg.cn/large/8b331ee1gw1fbifo65ncyj20po0v6wm7.jpg" alt=""></p>
+<p>当代码中需要input时，切换到Console窗口输入<br><img src="http://ww3.sinaimg.cn/large/8b331ee1gw1fbifq7bsxlj20nm0e4jvb.jpg" alt=""></p>
+<p><img src="http://ww3.sinaimg.cn/large/8b331ee1gw1fbifqp5rcaj211q0lutf5.jpg" alt=""></p>
+<p>用PyCharm调试跟Android Studio一样，毕竟都是一家公司的产品。</p>
+<hr>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://The-Coderz.github.io/2017/01/05/2016-12-27-通过trace文件定位耗时操作/" data-id="cixoakrj60006khahra19zofd" class="article-share-link">Share</a>
+      <a data-url="https://The-Coderz.github.io/2017/01/08/Python断点调试/" data-id="cixoakrjd000ekhah3q4bi4po" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具-python/">工具 python</a></li></ul>
 
     </footer>
   </div>
@@ -140,19 +137,19 @@ Android Studio生成trace文件的方法:
     
 <nav id="article-nav">
   
-    <a href="/2017/01/05/simple-mock-api/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/01/08/Stetho工具介绍/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          simple-mock-api
+          Stetho工具介绍
         
       </div>
     </a>
   
   
-    <a href="/2016/12/28/Postman/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/01/05/2017-01-05-powermock/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Postman</div>
+      <div class="article-nav-title">【2017-01-05-powermock】</div>
     </a>
   
 </nav>
