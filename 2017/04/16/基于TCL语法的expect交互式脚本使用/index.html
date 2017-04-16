@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>The Coders</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="基于TCL语法的expect交互式脚本使用​    有些事情是是头疼且重复的，譬如登陆线上服务器存在相同密码验证的跳板机、没有持续交付自动化流程的线上代码编译、构建、部署操作等。今天来说说TCL语法的expect脚本（极其简单），用可用的脚本来注释说明即可：
+免密码登陆服务器​    密码的当然是要写在脚本里的，或者只输入一次，这不是一个hack脚本…
+1234567891011121314151">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Coders">
+<meta property="og:url" content="https://The-Coderz.github.io/2017/04/16/基于TCL语法的expect交互式脚本使用/index.html">
+<meta property="og:site_name" content="The Coders">
+<meta property="og:description" content="基于TCL语法的expect交互式脚本使用​    有些事情是是头疼且重复的，譬如登陆线上服务器存在相同密码验证的跳板机、没有持续交付自动化流程的线上代码编译、构建、部署操作等。今天来说说TCL语法的expect脚本（极其简单），用可用的脚本来注释说明即可：
+免密码登陆服务器​    密码的当然是要写在脚本里的，或者只输入一次，这不是一个hack脚本…
+1234567891011121314151">
+<meta property="og:updated_time" content="2017-04-16T08:00:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Coders">
+<meta name="twitter:description" content="基于TCL语法的expect交互式脚本使用​    有些事情是是头疼且重复的，譬如登陆线上服务器存在相同密码验证的跳板机、没有持续交付自动化流程的线上代码编译、构建、部署操作等。今天来说说TCL语法的expect脚本（极其简单），用可用的脚本来注释说明即可：
+免密码登陆服务器​    密码的当然是要写在脚本里的，或者只输入一次，这不是一个hack脚本…
+1234567891011121314151">
+  
+    <link rel="alternate" href="/atom.xml" title="The Coders" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">The Coders</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://The-Coderz.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-基于TCL语法的expect交互式脚本使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/16/基于TCL语法的expect交互式脚本使用/" class="article-date">
+  <time datetime="2017-04-16T08:00:13.000Z" itemprop="datePublished">2017-04-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="基于TCL语法的expect交互式脚本使用"><a href="#基于TCL语法的expect交互式脚本使用" class="headerlink" title="基于TCL语法的expect交互式脚本使用"></a>基于TCL语法的expect交互式脚本使用</h2><p>​    有些事情是是头疼且重复的，譬如登陆线上服务器存在相同密码验证的跳板机、没有持续交付自动化流程的线上代码编译、构建、部署操作等。今天来说说TCL语法的expect脚本（极其简单），用可用的脚本来注释说明即可：</p>
+<h3 id="免密码登陆服务器"><a href="#免密码登陆服务器" class="headerlink" title="免密码登陆服务器"></a>免密码登陆服务器</h3><p>​    <strong><em>密码的当然是要写在脚本里的，或者只输入一次，这不是一个hack脚本…</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/expect -f</div><div class="line"></div><div class="line">proc terminal:password:get &#123;promptString&#125; &#123;		# TCL的子程序定义方式</div><div class="line"></div><div class="line">     # Turn off echoing, but leave newlines on.  That looks better.</div><div class="line">     # Note that the terminal is left in cooked mode, so people can still use backspace</div><div class="line">     exec stty -echo echonl &lt;@stdin</div><div class="line"></div><div class="line">     # Print the prompt</div><div class="line">     puts -nonewline stdout $promptString</div><div class="line">     flush stdout</div><div class="line"></div><div class="line">     # Read that password!  :^)</div><div class="line">     gets stdin password</div><div class="line"></div><div class="line">     # Reset the terminal</div><div class="line">     exec stty echo -echonl &lt;@stdin</div><div class="line"></div><div class="line">     return $password</div><div class="line">&#125;</div><div class="line"></div><div class="line">proc chooseMachine &#123; &#125; &#123;</div><div class="line">    puts &quot;请选择机器\n1) 10.0.0.73 (codecenter-pre default);\n2) 10.0.2.153 (codecenter-prod);\n3) 10.0.2.154 (codecenter-prod);\na) 10.0.0.72 (codecenter-node-pre);\nb) 10.0.2.151 (codecenter-node-prod);\nc) 10.0.2.152 (codecenter-node-prod);&quot;;</div><div class="line">    gets stdin choice;</div><div class="line">    switch $choice &#123;</div><div class="line">        1 &#123;</div><div class="line">            return &quot;10.0.0.73&quot;;</div><div class="line">        &#125;</div><div class="line">        1 &#123;</div><div class="line">            return &quot;10.0.2.153&quot;;</div><div class="line">        &#125;</div><div class="line">        2 &#123;</div><div class="line">            return &quot;10.0.2.154&quot;;</div><div class="line">        &#125;</div><div class="line">        a &#123;</div><div class="line">            return &quot;10.0.0.72&quot;;</div><div class="line">        &#125;</div><div class="line">        b &#123;</div><div class="line">            return &quot;10.0.2.151&quot;;</div><div class="line">        &#125;</div><div class="line">        c &#123;</div><div class="line">            return &quot;10.0.2.152&quot;;</div><div class="line">        &#125;</div><div class="line">        default &#123;</div><div class="line">            return &quot;10.0.0.73&quot;;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">proc chooseJumper &#123; IP &#125; &#123;</div><div class="line">    switch $IP &#123;</div><div class="line">        &quot;10.0.0.73&quot; &#123; </div><div class="line">            return &quot;120.27.220.50&quot;;</div><div class="line">        &#125;</div><div class="line">        &quot;10.0.0.72&quot; &#123;</div><div class="line">            return &quot;120.27.220.50&quot;;</div><div class="line">        &#125;</div><div class="line">        default &#123;</div><div class="line">            return &quot;121.43.182.162&quot;;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">proc chooseJumperAccount &#123; JUMPER &#125; &#123;</div><div class="line">    switch $JUMPER &#123;</div><div class="line">        &quot;120.27.220.50&quot; &#123;</div><div class="line">            return &quot;root&quot;;</div><div class="line">        &#125;</div><div class="line">        default &#123;</div><div class="line">            return &quot;admin&quot;;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">set IP [ chooseMachine ];		# TCL 语法的创建变量 + 子程序调用方式</div><div class="line">set JUMPER [ chooseJumper $IP ];</div><div class="line">set JUMPER_ACCOUNT [ chooseJumperAccount $JUMPER ];</div><div class="line">set PASSWORD [ terminal:password:get &quot;输入密码&quot; ];</div><div class="line">spawn ssh van.yzt@100.69.206.131;			# expect 语法，生成一个子程序用于接着后续的“expect”语句交互</div><div class="line">expect &quot;*password:&quot;;</div><div class="line">send &quot;$PASSWORD\r&quot;;</div><div class="line">expect &quot;*$*&quot;;</div><div class="line">send &quot;sudo su admin\r&quot;;</div><div class="line">expect &quot;*password*&quot;;</div><div class="line">send &quot;$PASSWORD\r&quot;;</div><div class="line">expect &quot;*$*&quot;;</div><div class="line">send &quot;ssh $JUMPER_ACCOUNT@$JUMPER\r&quot;;</div><div class="line">expect &quot;*]*&quot;;</div><div class="line">send &quot;ssh root@$IP\r&quot;;</div><div class="line">set timeout 1;</div><div class="line">expect &#123;</div><div class="line">    &quot;*yes/no&quot; &#123; send &quot;yes\r&quot;;exp_continue; &#125;</div><div class="line">    &quot;*password:&quot; &#123; send &quot;Codecenter123\r&quot;; &#125;</div><div class="line">&#125;</div><div class="line">interact;			# 告知子程序，停留在机器上不结束自己，提供给用户后续的操作</div></pre></td></tr></table></figure>
+<p>​    同样的，利用expect，还可以做其他的操作，例如打包源码-&gt;上传代码到服务器-&gt;在服务器上编译、构建、部署等。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://The-Coderz.github.io/2017/04/16/基于TCL语法的expect交互式脚本使用/" data-id="cj1kekdp4000vb7ahxjsaelcp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/04/16/Docker简单使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Docker简单使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/图形学/">图形学</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-开源代码/">c++ 开源代码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具-docker/">工具 docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具-python/">工具 python</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/c-开源代码/" style="font-size: 15px;">c++ 开源代码</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/工具-docker/" style="font-size: 10px;">工具 docker</a> <a href="/tags/工具-python/" style="font-size: 10px;">工具 python</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/16/基于TCL语法的expect交互式脚本使用/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/16/Docker简单使用/">Docker简单使用</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/16/在macOS 10.12 上编译 Android 5.1/">在macOS 10.12 上编译 Android 5.1</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/16/xlog接入方案/">xlog接入方案</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/16/spdlog源码学习/">spdlog源码学习</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 The-Coders<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
